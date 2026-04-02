@@ -11,14 +11,14 @@
     "pinned": false
   },
   {
-    "repo": "ai-literacy-workshop",
-    "url": "https://ichentsaitw.github.io/ai-literacy-workshop/",
-    "title": "AI 素養教育工作坊",
-    "desc": "AI 時代父母最需要的一堂課。從好奇心出發，讓 AI 賦能孩子的探索，家長示範、一起實作。",
-    "tag": "",
-    "emoji": "🎓",
-    "site_id": "ai-literacy-workshop",
-    "date": "2026-03-31",
+    "repo": "ic-blog",
+    "url": "https://ichentsaitw.github.io/ic-blog/",
+    "title": "IC 觀點",
+    "desc": "蔡依橙的個人部落格。閱讀筆記、教養思考、時事觀點、醫療教育。",
+    "tag": "部落格",
+    "emoji": "📝",
+    "site_id": "ic-blog-gh",
+    "date": "2026-04-02",
     "pinned": false
   },
   {
@@ -33,6 +33,28 @@
     "pinned": false
   },
   {
+    "repo": "dc-travel-guide",
+    "url": "https://ichentsaitw.github.io/dc-travel-guide/",
+    "title": "Washington DC 深度旅遊指南",
+    "desc": "免費博物館群密度全球第一，從航太博物館到自然史博物館，三天根本走不完。林肯紀念堂、越戰牆、Georgetown 石板路，每條街都是歷史課。",
+    "tag": "旅遊",
+    "emoji": "🏛️",
+    "site_id": "dc-travel-guide",
+    "date": "2026-04-01",
+    "pinned": false
+  },
+  {
+    "repo": "ai-literacy-workshop",
+    "url": "https://ichentsaitw.github.io/ai-literacy-workshop/",
+    "title": "AI 素養教育工作坊",
+    "desc": "AI 時代父母最需要的一堂課。從好奇心出發，讓 AI 賦能孩子的探索，家長示範、一起實作。",
+    "tag": "",
+    "emoji": "🎓",
+    "site_id": "ai-literacy-workshop",
+    "date": "2026-03-31",
+    "pinned": false
+  },
+  {
     "repo": "gt-waitlist-guide",
     "url": "https://ichentsaitw.github.io/gt-waitlist-guide/",
     "title": "頂尖理工大學備取完全攻略",
@@ -41,17 +63,6 @@
     "emoji": "🐝",
     "site_id": "gt-waitlist-guide",
     "date": "2026-03-31",
-    "pinned": false
-  },
-  {
-    "repo": "us-ee-university-guide",
-    "url": "https://ichentsaitw.github.io/us-ee-university-guide/",
-    "title": "美國 EE 大學指南",
-    "desc": "美國電機工程（Electrical Engineering）前 30 名大學的研究與整理。",
-    "tag": "生涯輔導",
-    "emoji": "🏫",
-    "site_id": "us-ee-university-guide",
-    "date": "2026-03-20",
     "pinned": false
   },
   {
@@ -66,14 +77,14 @@
     "pinned": false
   },
   {
-    "repo": "sam-altman-story",
-    "url": "https://ichentsaitw.github.io/sam-altman-story/",
-    "title": "Sam Altman 背景研究",
-    "desc": "搭配《The Optimist》閱讀，整理 Sam Altman 的人生時間軸、創業歷程與爭議事件。",
-    "tag": "人物研究",
-    "emoji": "👤",
-    "site_id": "sam-altman-story",
-    "date": "2026-03-25",
+    "repo": "kpop-big4-analysis",
+    "url": "https://ichentsaitw.github.io/kpop-big4-analysis/",
+    "title": "K-POP 四大經紀公司｜誰賺最多？誰的藝人最幸福？",
+    "desc": "SM、YG、JYP、HYBE——分潤結構、練習生人權、創辦人接班、粉絲經濟全解析。",
+    "tag": "K-pop",
+    "emoji": "🎤",
+    "site_id": "kpop-big4-analysis",
+    "date": "2026-03-27",
     "pinned": false
   },
   {
@@ -88,17 +99,6 @@
     "pinned": false
   },
   {
-    "repo": "kpop-big4-analysis",
-    "url": "https://ichentsaitw.github.io/kpop-big4-analysis/",
-    "title": "K-POP 四大經紀公司｜誰賺最多？誰的藝人最幸福？",
-    "desc": "SM、YG、JYP、HYBE——分潤結構、練習生人權、創辦人接班、粉絲經濟全解析。",
-    "tag": "K-pop",
-    "emoji": "🎤",
-    "site_id": "kpop-big4-analysis",
-    "date": "2026-03-27",
-    "pinned": false
-  },
-  {
     "repo": "aespa-analysis",
     "url": "https://ichentsaitw.github.io/aespa-analysis/",
     "title": "深入了解 aespa｜從練習生到舞台背後的真實故事",
@@ -107,6 +107,17 @@
     "emoji": "⚡",
     "site_id": "aespa-analysis",
     "date": "2026-03-26",
+    "pinned": false
+  },
+  {
+    "repo": "sam-altman-story",
+    "url": "https://ichentsaitw.github.io/sam-altman-story/",
+    "title": "Sam Altman 背景研究",
+    "desc": "搭配《The Optimist》閱讀，整理 Sam Altman 的人生時間軸、創業歷程與爭議事件。",
+    "tag": "人物研究",
+    "emoji": "👤",
+    "site_id": "sam-altman-story",
+    "date": "2026-03-25",
     "pinned": false
   },
   {
@@ -121,17 +132,6 @@
     "pinned": false
   },
   {
-    "repo": "chef-my-fridge-analysis",
-    "url": "https://ichentsaitw.github.io/chef-my-fridge-analysis/",
-    "title": "打開冰箱的那 3 秒鐘",
-    "desc": "一個韓國綜藝節目，藏著關於限制、直覺與真正專業力的深層問題。",
-    "tag": "文化觀察",
-    "emoji": "🍳",
-    "site_id": "chef-my-fridge-analysis",
-    "date": "2026-03-24",
-    "pinned": false
-  },
-  {
     "repo": "shahimi-guide",
     "url": "https://ichentsaitw.github.io/shahimi-guide/",
     "title": "胖鯊魚鯊西米｜情報整理",
@@ -143,14 +143,14 @@
     "pinned": false
   },
   {
-    "repo": "dc-travel-guide",
-    "url": "https://ichentsaitw.github.io/dc-travel-guide/",
-    "title": "Washington DC 深度旅遊指南",
-    "desc": "免費博物館群密度全球第一，從航太博物館到自然史博物館，三天根本走不完。林肯紀念堂、越戰牆、Georgetown 石板路，每條街都是歷史課。",
-    "tag": "旅遊",
-    "emoji": "🏛️",
-    "site_id": "dc-travel-guide",
-    "date": "2026-04-01",
+    "repo": "chef-my-fridge-analysis",
+    "url": "https://ichentsaitw.github.io/chef-my-fridge-analysis/",
+    "title": "拜託了冰箱｜打開冰箱的那 3 秒鐘",
+    "desc": "一個韓國綜藝節目，藏著關於限制、直覺與真正專業力的深層問題。",
+    "tag": "文化觀察",
+    "emoji": "🍳",
+    "site_id": "chef-my-fridge-analysis",
+    "date": "2026-03-24",
     "pinned": false
   },
   {
@@ -165,14 +165,14 @@
     "pinned": false
   },
   {
-    "repo": "ic-blog",
-    "url": "https://ichentsaitw.github.io/ic-blog/",
-    "title": "IC 觀點",
-    "desc": "蔡依橙的個人部落格。閱讀筆記、教養思考、時事觀點、醫療教育。",
-    "tag": "部落格",
-    "emoji": "📝",
-    "site_id": "ic-blog-gh",
-    "date": "2026-04-02",
+    "repo": "us-ee-university-guide",
+    "url": "https://ichentsaitw.github.io/us-ee-university-guide/",
+    "title": "美國 EE 大學指南",
+    "desc": "美國電機工程（Electrical Engineering）前 30 名大學的研究與整理。",
+    "tag": "生涯輔導",
+    "emoji": "🏫",
+    "site_id": "us-ee-university-guide",
+    "date": "2026-03-20",
     "pinned": false
   },
   {
