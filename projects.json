@@ -1,0 +1,189 @@
+[
+  {
+    "repo": "cy-university",
+    "url": "https://ichentsaitw.github.io/cy-university/",
+    "title": "留學申請觀察筆記",
+    "desc": "從一次完整申請季的結果，分析 Early vs Regular 的結構性差異，以及如何調整策略。",
+    "tag": "生涯輔導",
+    "emoji": "📘",
+    "site_id": "cy-university",
+    "date": "2026-04-02",
+    "pinned": false
+  },
+  {
+    "repo": "ai-literacy-workshop",
+    "url": "https://ichentsaitw.github.io/ai-literacy-workshop/",
+    "title": "AI 素養教育工作坊",
+    "desc": "AI 時代父母最需要的一堂課。從好奇心出發，讓 AI 賦能孩子的探索，家長示範、一起實作。",
+    "tag": "生涯輔導",
+    "emoji": "🎓",
+    "site_id": "ai-literacy-workshop",
+    "date": "2026-03-31",
+    "pinned": false
+  },
+  {
+    "repo": "purdue-freshman-guide",
+    "url": "https://ichentsaitw.github.io/purdue-freshman-guide/",
+    "title": "美國理工名校新生完全指南",
+    "desc": "台灣國際學生入學前後攻略：簽證 I-20、宿舍、選課策略、SSN、駕照，一頁搞定。",
+    "tag": "生涯輔導",
+    "emoji": "🚂",
+    "site_id": "purdue-freshman-guide",
+    "date": "2026-04-01",
+    "pinned": false
+  },
+  {
+    "repo": "gt-waitlist-guide",
+    "url": "https://ichentsaitw.github.io/gt-waitlist-guide/",
+    "title": "頂尖理工大學備取完全攻略",
+    "desc": "美國頂尖理工校 Waitlist 怎麼運作？歷年錄取率、決策時間軸、該做什麼不該做什麼。",
+    "tag": "生涯輔導",
+    "emoji": "🐝",
+    "site_id": "gt-waitlist-guide",
+    "date": "2026-03-31",
+    "pinned": false
+  },
+  {
+    "repo": "us-ee-university-guide",
+    "url": "https://ichentsaitw.github.io/us-ee-university-guide/",
+    "title": "美國 EE 大學指南",
+    "desc": "美國電機工程（Electrical Engineering）前 30 名大學的研究與整理。",
+    "tag": "生涯輔導",
+    "emoji": "🏫",
+    "site_id": "us-ee-university-guide",
+    "date": "2026-03-20",
+    "pinned": false
+  },
+  {
+    "repo": "admission-results",
+    "url": "https://ichentsaitw.github.io/admission-results/",
+    "title": "美國大學錄取結果｜工程排名比較",
+    "desc": "錄取校 vs 台大，USN / THE / QS 三大排名系統對照分析。",
+    "tag": "生涯輔導",
+    "emoji": "🎯",
+    "site_id": "admission-results",
+    "date": "2026-03-30",
+    "pinned": false
+  },
+  {
+    "repo": "sam-altman-story",
+    "url": "https://ichentsaitw.github.io/sam-altman-story/",
+    "title": "Sam Altman 背景研究",
+    "desc": "搭配《The Optimist》閱讀，整理 Sam Altman 的人生時間軸、創業歷程與爭議事件。",
+    "tag": "人物研究",
+    "emoji": "👤",
+    "site_id": "sam-altman-story",
+    "date": "2026-03-25",
+    "pinned": false
+  },
+  {
+    "repo": "claude-research",
+    "url": "https://ichentsaitw.github.io/claude-research/",
+    "title": "Anthropic 深度研究：Claude 為何能殺出血路？",
+    "desc": "從 OpenAI 出走的 11 人，如何用「安全優先」打造史上最快企業軟體公司。",
+    "tag": "科技",
+    "emoji": "🤖",
+    "site_id": "claude-research",
+    "date": "2026-03-26",
+    "pinned": false
+  },
+  {
+    "repo": "kpop-big4-analysis",
+    "url": "https://ichentsaitw.github.io/kpop-big4-analysis/",
+    "title": "K-POP 四大經紀公司｜誰賺最多？誰的藝人最幸福？",
+    "desc": "SM、YG、JYP、HYBE——分潤結構、練習生人權、創辦人接班、粉絲經濟全解析。",
+    "tag": "K-pop",
+    "emoji": "🎤",
+    "site_id": "kpop-big4-analysis",
+    "date": "2026-03-27",
+    "pinned": false
+  },
+  {
+    "repo": "aespa-analysis",
+    "url": "https://ichentsaitw.github.io/aespa-analysis/",
+    "title": "深入了解 aespa｜從練習生到舞台背後的真實故事",
+    "desc": "十億美元併購案、Supernova 神曲、過勞真相——給粉絲的商業世界入門讀物。",
+    "tag": "K-pop",
+    "emoji": "⚡",
+    "site_id": "aespa-analysis",
+    "date": "2026-03-26",
+    "pinned": false
+  },
+  {
+    "repo": "blackpink-guide",
+    "url": "https://ichentsaitw.github.io/blackpink-guide/",
+    "title": "認識 BLACKPINK｜商業模式與合約策略全解析",
+    "desc": "四個人如何改寫 K-pop 的商業規則——從練習生到精品代言人。",
+    "tag": "K-pop",
+    "emoji": "🖤",
+    "site_id": "blackpink-guide",
+    "date": "2026-03-25",
+    "pinned": false
+  },
+  {
+    "repo": "chef-my-fridge-analysis",
+    "url": "https://ichentsaitw.github.io/chef-my-fridge-analysis/",
+    "title": "打開冰箱的那 3 秒鐘",
+    "desc": "一個韓國綜藝節目，藏著關於限制、直覺與真正專業力的深層問題。",
+    "tag": "文化觀察",
+    "emoji": "🍳",
+    "site_id": "chef-my-fridge-analysis",
+    "date": "2026-03-24",
+    "pinned": false
+  },
+  {
+    "repo": "shahimi-guide",
+    "url": "https://ichentsaitw.github.io/shahimi-guide/",
+    "title": "胖鯊魚鯊西米｜情報整理",
+    "desc": "台灣 LINE 貼圖 IP 的商業分析。從分潤機制到收入天花板，給國中生的研究入門。",
+    "tag": "IP分析",
+    "emoji": "🦈",
+    "site_id": "shahimi-guide",
+    "date": "2026-03-25",
+    "pinned": false
+  },
+  {
+    "repo": "dc-travel-guide",
+    "url": "https://ichentsaitw.github.io/dc-travel-guide/",
+    "title": "Washington DC 深度旅遊指南",
+    "desc": "夫妻同遊美國首都。Arlington 住宿省 30%、近代史紀念館群、Georgetown 石板路。",
+    "tag": "旅遊",
+    "emoji": "🏛️",
+    "site_id": "dc-travel-guide",
+    "date": "2026-04-01",
+    "pinned": false
+  },
+  {
+    "repo": "denryu",
+    "url": "https://ichentsaitw.github.io/denryu/",
+    "title": "蔥盟寶可夢圖鑑",
+    "desc": "電龍、小火龍、傑尼龜、胖丁的互動式圖鑑網頁。蔥盟知名寶可夢大集合。",
+    "tag": "趣味",
+    "emoji": "⚡",
+    "site_id": "denryu",
+    "date": "2026-03-22",
+    "pinned": false
+  },
+  {
+    "repo": "ic-blog",
+    "url": "https://ichentsaitw.github.io/ic-blog/",
+    "title": "IC 觀點",
+    "desc": "蔡依橙的個人部落格。閱讀筆記、教養思考、時事觀點、醫療教育。",
+    "tag": "部落格",
+    "emoji": "📝",
+    "site_id": "ic-blog-gh",
+    "date": "2026-04-02",
+    "pinned": false
+  },
+  {
+    "repo": "",
+    "url": "https://i-chentsai.innovarad.tw/",
+    "title": "蔡依橙的閱讀筆記",
+    "desc": "個人部落格。醫學、教育、閱讀、國際觀察、小孩教養，什麼都聊。",
+    "tag": "部落格",
+    "emoji": "✍️",
+    "site_id": "ic-blog",
+    "date": "2020-01-01",
+    "pinned": true
+  }
+]
