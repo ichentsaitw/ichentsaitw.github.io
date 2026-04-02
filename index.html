@@ -350,7 +350,7 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_page_view`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` },
-  body: JSON.stringify({ site: 'ic-root' })
+  body: JSON.stringify({ site: 'ic-lab' })
 }).then(r => r.json()).then(n => {
   document.getElementById('counter').textContent = (n || 0).toLocaleString() + ' 次瀏覽';
 }).catch(() => {});
