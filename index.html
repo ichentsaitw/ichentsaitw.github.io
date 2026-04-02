@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="蔡依橙（IC）的個人研究室。人物深度研究、K-pop 產業分析、生涯輔導、科技觀察、旅遊筆記，好奇心驅動，Claude 協作產出。">
+<meta name="keywords" content="蔡依橙,IC,研究室,生涯輔導,K-pop,人物研究">
+<meta name="author" content="蔡依橙">
+<link rel="canonical" href="https://ichentsaitw.github.io/">
+<link rel="alternate" type="application/rss+xml" title="IC 的個人研究室" href="https://ichentsaitw.github.io/feed.xml">
+<meta name="robots" content="index, follow">
+<title>IC 的個人研究室｜好奇心驅動的研究成果總覽</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23C48A5A'/%3E%3Ctext x='50' y='54' text-anchor='middle' dominant-baseline='central' font-family='serif' font-weight='bold' font-size='58' fill='white'%3EIC%3C/text%3E%3C/svg%3E">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap');
+
+  :root {
+    --bg: #FAF6F1;
+    --card-bg: #FFFFFF;
+    --text: #2C2825;
+    --text-light: #6B6460;
+    --text-muted: #A69E97;
+    --border: #EDE6DD;
+    --accent: #B8782E;
+    --accent-light: #F5E6D3;
+    --shadow: 0 2px 8px rgba(44, 40, 37, 0.05), 0 8px 28px rgba(44, 40, 37, 0.04);
+    --radius: 20px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans TC', -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: #2A1F14;
+    color: white;
+    text-align: center;
+    padding: 80px 24px 64px;
+    border-radius: 0 0 36px 36px;
+  }
+  /* Placeholder for cover image - will be replaced */
+  .hero-cover {
+    position: absolute;
+    inset: 0;
+    background: #2A1F14;
+    z-index: 0;
+  }
+  .hero-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(42,31,20,0.1) 0%, rgba(42,31,20,0.65) 100%);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 2.6em;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    margin-bottom: 8px;
+  }
+  .hero .subtitle {
+    font-size: 1em;
+    opacity: 0.85;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  .hero .counter-bar {
+    margin-top: 16px;
+    font-size: 0.8em;
+    opacity: 0.7;
+  }
+  .hero .counter-bar span { font-weight: 700; }
+
+  /* ===== Filter Tabs ===== */
+  .filter-bar {
+    max-width: 900px;
+    margin: -18px auto 24px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
+  }
+  .filter-inner {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 6px 18px;
+    border-radius: 30px;
+    border: 1.5px solid var(--border);
+    background: transparent;
+    color: var(--text-light);
+    font-size: 0.88em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  /* ===== Project Grid ===== */
+  .grid {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(44,40,37,0.08), 0 16px 40px rgba(44,40,37,0.06);
+  }
+
+  .card-thumb {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-body {
+    padding: 18px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-body h3 {
+    font-size: 1.08em;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .card-body p {
+    font-size: 0.88em;
+    color: var(--text-light);
+    flex: 1;
+    margin-bottom: 12px;
+  }
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+  }
+  .card-views {
+    font-size: 0.78em;
+    color: var(--text-muted);
+  }
+  .card-views span { font-weight: 700; }
+
+  /* Tag colors */
+  .tag-人物研究 { background: #E8F4FD; color: #1E6B9A; }
+  .tag-IP分析 { background: #FFF2F5; color: #9D3050; }
+  .tag-寶可夢 { background: #FEF9E7; color: #8B6914; }
+  .tag-教育 { background: #E8F8F0; color: #1A7A4C; }
+  .tag-投資 { background: #F3EEFB; color: #5B3A8C; }
+  .tag-K-pop { background: #FDE4EF; color: #B5145A; }
+  .tag-文化 { background: #FDE8D8; color: #C13B2C; }
+  .tag-科技 { background: #FFF3E0; color: #B45309; }
+  .tag-旅遊 { background: #E8EEF8; color: #1B2A4A; }
+  .tag-升學 { background: #FFF8E7; color: #8B6914; }
+  .tag-觀摩 { background: #F0F4F0; color: #3A6B3A; }
+  .thumb-觀摩 { background: linear-gradient(135deg, #D4E8D4, #A8CCA8); }
+
+  /* Card thumb backgrounds */
+  .thumb-人物研究 { background: linear-gradient(135deg, #D4E9F7, #A8D1F0); }
+  .thumb-IP分析 { background: linear-gradient(135deg, #FCE4EC, #F8BBD0); }
+  .thumb-寶可夢 { background: linear-gradient(135deg, #FFF8E1, #FFE082); }
+  .thumb-教育 { background: linear-gradient(135deg, #E0F2F1, #A5D6A7); }
+  .thumb-K-pop { background: linear-gradient(135deg, #1A1A1A, #E91E8C); }
+  .thumb-文化 { background: linear-gradient(135deg, #8C2B1F, #C9963A); }
+  .thumb-投資 { background: linear-gradient(135deg, #EDE7F6, #B39DDB); }
+  .thumb-科技 { background: linear-gradient(135deg, #1E3A5F, #D97706); }
+  .thumb-旅遊 { background: linear-gradient(135deg, #1B2A4A, #B22234); }
+  .thumb-升學 { background: linear-gradient(135deg, #000000, #CFB991); }
+
+  /* ===== Footer ===== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 0.8em;
+    border-top: 1px solid var(--border);
+    max-width: 900px;
+    margin: 0 auto 40px;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 600px) {
+    .hero { padding: 48px 16px 42px; }
+    .hero h1 { font-size: 2em; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div class="hero-cover">
+    <img src="https://ichentsaitw.github.io/iclab/cover.jpg" alt="IC的個人研究室">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>IC 的個人研究室</h1>
+    <p class="subtitle">好奇一件事 → 研究它 → 做成網頁 → 作為筆記並跟朋友們討論。這裡收錄所有成果讓自己好找。</p>
+    <div class="counter-bar">
+      <span id="counter">0 次瀏覽</span>
+    </div>
+    <div style="margin-top:.5rem;font-size:.75rem;color:rgba(255,255,255,.55);letter-spacing:.03em;">最近更新 2026/4/1 · 留學申請觀察筆記上線</div>
+  </div>
+</div>
+
+<!-- ===== Filter ===== -->
+<nav class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="人物研究">人物研究</button>
+    <button class="filter-btn" data-filter="IP分析">IP 分析</button>
+    <button class="filter-btn" data-filter="教育">教育</button>
+    <button class="filter-btn" data-filter="寶可夢">寶可夢</button>
+    <button class="filter-btn" data-filter="K-pop">K-pop</button>
+    <button class="filter-btn" data-filter="科技">科技</button>
+    <button class="filter-btn" data-filter="旅遊">旅遊</button>
+    <button class="filter-btn" data-filter="升學">升學</button>
+    <button class="filter-btn" data-filter="觀摩">觀摩</button>
+    <button class="filter-btn" data-filter="文化">文化</button>
+  </div>
+</nav>
+
+<!-- ===== Grid ===== -->
+<section class="grid" id="projectGrid">
+
+  <a href="https://ichentsaitw.github.io/cy-university/" target="_blank" class="project-card sortable" data-tag="生涯輔導" data-site="cy-university">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1565C0,#42A5F5)" aria-hidden="true">📘</div>
+    <div class="card-body">
+      <h3>留學申請觀察筆記</h3>
+      <p>從一次完整申請季的結果，分析 Early vs Regular 的結構性差異，以及如何調整策略。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E3F2FD;color:#1565C0;">生涯輔導</span>
+        <span class="card-views"><span class="site-count" data-site="cy-university">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/ai-literacy-workshop/" target="_blank" class="project-card sortable" data-tag="生涯輔導" data-site="ai-literacy-workshop">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1565C0,#42A5F5)" aria-hidden="true">🎓</div>
+    <div class="card-body">
+      <h3>AI 素養教育工作坊</h3>
+      <p>AI 時代父母最需要的一堂課。從好奇心出發，讓 AI 賦能孩子的探索，家長示範、一起實作。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E3F2FD;color:#1565C0;">生涯輔導</span>
+        <span class="card-views"><span class="site-count" data-site="ai-literacy-workshop">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/purdue-freshman-guide/" target="_blank" class="project-card sortable" data-tag="生涯輔導" data-site="purdue-freshman-guide">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1565C0,#42A5F5)" aria-hidden="true">🚂</div>
+    <div class="card-body">
+      <h3>美國理工名校新生完全指南</h3>
+      <p>台灣國際學生入學前後攻略：簽證 I-20、宿舍、選課策略、SSN、駕照，一頁搞定。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E3F2FD;color:#1565C0;">生涯輔導</span>
+        <span class="card-views"><span class="site-count" data-site="purdue-freshman-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/gt-waitlist-guide/" target="_blank" class="project-card sortable" data-tag="生涯輔導" data-site="gt-waitlist-guide">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1565C0,#42A5F5)" aria-hidden="true">🐝</div>
+    <div class="card-body">
+      <h3>頂尖理工大學備取完全攻略</h3>
+      <p>美國頂尖理工校 Waitlist 怎麼運作？歷年錄取率、決策時間軸、該做什麼不該做什麼。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E3F2FD;color:#1565C0;">生涯輔導</span>
+        <span class="card-views"><span class="site-count" data-site="gt-waitlist-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/us-ee-university-guide/" target="_blank" class="project-card sortable" data-tag="生涯輔導" data-site="us-ee-university-guide">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1565C0,#42A5F5)" aria-hidden="true">🏫</div>
+    <div class="card-body">
+      <h3>美國 EE 大學指南</h3>
+      <p>美國電機工程（Electrical Engineering）前 30 名大學的研究與整理。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E3F2FD;color:#1565C0;">生涯輔導</span>
+        <span class="card-views"><span class="site-count" data-site="us-ee-university-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/admission-results/" target="_blank" class="project-card sortable" data-tag="生涯輔導" data-site="admission-results">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1565C0,#42A5F5)" aria-hidden="true">🎯</div>
+    <div class="card-body">
+      <h3>胖丁的美國大學錄取結果｜工程排名比較</h3>
+      <p>錄取校 vs 台大，USN / THE / QS 三大排名系統對照分析。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E3F2FD;color:#1565C0;">生涯輔導</span>
+        <span class="card-views"><span class="site-count" data-site="admission-results">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/sam-altman-story/" target="_blank" class="project-card sortable" data-tag="人物研究" data-site="sam-altman-story">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1E3A5F,#2E6DA4)" aria-hidden="true">👤</div>
+    <div class="card-body">
+      <h3>Sam Altman 背景研究</h3>
+      <p>搭配《The Optimist》閱讀，整理 Sam Altman 的人生時間軸、創業歷程與爭議事件。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E8F4FD;color:#1E6B9A;">人物研究</span>
+        <span class="card-views"><span class="site-count" data-site="sam-altman-story">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/claude-research/" target="_blank" class="project-card sortable" data-tag="科技" data-site="claude-research">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1B5E20,#43A047)" aria-hidden="true">🤖</div>
+    <div class="card-body">
+      <h3>Anthropic 深度研究：Claude 為何能殺出血路？</h3>
+      <p>從 OpenAI 出走的 11 人，如何用「安全優先」打造史上最快企業軟體公司。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E8F5E9;color:#2E7D32;">科技</span>
+        <span class="card-views"><span class="site-count" data-site="claude-research">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/kpop-big4-analysis/" target="_blank" class="project-card sortable" data-tag="K-pop" data-site="kpop-big4-analysis">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#AD1457,#E91E8C)" aria-hidden="true">🎤</div>
+    <div class="card-body">
+      <h3>K-POP 四大經紀公司｜誰賺最多？誰的藝人最幸福？</h3>
+      <p>SM、YG、JYP、HYBE——分潤結構、練習生人權、創辦人接班、粉絲經濟全解析。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#FCE4EC;color:#AD1457;">K-pop</span>
+        <span class="card-views"><span class="site-count" data-site="kpop-big4-analysis">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/aespa-analysis/" target="_blank" class="project-card sortable" data-tag="K-pop" data-site="aespa-analysis">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#AD1457,#E91E8C)" aria-hidden="true">⚡</div>
+    <div class="card-body">
+      <h3>深入了解 aespa｜從練習生到舞台背後的真實故事</h3>
+      <p>十億美元併購案、Supernova 神曲、過勞真相——給粉絲的商業世界入門讀物。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#FCE4EC;color:#AD1457;">K-pop</span>
+        <span class="card-views"><span class="site-count" data-site="aespa-analysis">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/blackpink-guide/" target="_blank" class="project-card sortable" data-tag="K-pop" data-site="blackpink-guide">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#AD1457,#E91E8C)" aria-hidden="true">🖤</div>
+    <div class="card-body">
+      <h3>認識 BLACKPINK｜商業模式與合約策略全解析</h3>
+      <p>四個人如何改寫 K-pop 的商業規則——從練習生到精品代言人。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#FCE4EC;color:#AD1457;">K-pop</span>
+        <span class="card-views"><span class="site-count" data-site="blackpink-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/chef-my-fridge-analysis/" target="_blank" class="project-card sortable" data-tag="文化觀察" data-site="chef-my-fridge-analysis">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#BF360C,#FF5722)" aria-hidden="true">🍳</div>
+    <div class="card-body">
+      <h3>打開冰箱的那 3 秒鐘</h3>
+      <p>一個韓國綜藝節目，藏著關於限制、直覺與真正專業力的深層問題。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#FBE9E7;color:#BF360C;">文化觀察</span>
+        <span class="card-views"><span class="site-count" data-site="chef-my-fridge-analysis">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/shahimi-guide/" target="_blank" class="project-card sortable" data-tag="IP分析" data-site="shahimi-guide">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#4A148C,#9C27B0)" aria-hidden="true">🦈</div>
+    <div class="card-body">
+      <h3>胖鯊魚鯊西米｜情報整理</h3>
+      <p>台灣 LINE 貼圖 IP 的商業分析。從分潤機制到收入天花板，給國中生的研究入門。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#F3E5F5;color:#6A1B9A;">IP分析</span>
+        <span class="card-views"><span class="site-count" data-site="shahimi-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/dc-travel-guide/" target="_blank" class="project-card sortable" data-tag="旅遊" data-site="dc-travel-guide">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#E65100,#FFA726)" aria-hidden="true">🏛️</div>
+    <div class="card-body">
+      <h3>Washington DC 深度旅遊指南</h3>
+      <p>夫妻同遊美國首都。Arlington 住宿省 30%、近代史紀念館群、Georgetown 石板路。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#FFF8E1;color:#F57F17;">旅遊</span>
+        <span class="card-views"><span class="site-count" data-site="dc-travel-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/denryu/" target="_blank" class="project-card sortable" data-tag="趣味" data-site="denryu">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#1A237E,#3F51B5)" aria-hidden="true">⚡</div>
+    <div class="card-body">
+      <h3>蔥盟寶可夢圖鑑</h3>
+      <p>電龍、小火龍、傑尼龜、胖丁的互動式圖鑑網頁。蔥盟知名寶可夢大集合。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#E8EAF6;color:#283593;">趣味</span>
+        <span class="card-views"><span class="site-count" data-site="denryu">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://ichentsaitw.github.io/ic-blog/" target="_blank" class="project-card sortable" data-tag="部落格" data-site="ic-blog-gh">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#C8602A,#8B3A14)" aria-hidden="true">📝</div>
+    <div class="card-body">
+      <h3>IC 觀點</h3>
+      <p>蔡依橙的個人部落格。閱讀筆記、教養思考、時事觀點、醫療教育。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#F0E6DB;color:#5C4A3A;">部落格</span>
+        <span class="card-views"><span class="site-count" data-site="ic-blog-gh">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a href="https://i-chentsai.innovarad.tw/" target="_blank" class="project-card pinned-last" data-tag="部落格" data-site="ic-blog">
+    <div class="card-thumb" style="background:linear-gradient(135deg,#C8602A,#8B3A14)" aria-hidden="true">✍️</div>
+    <div class="card-body">
+      <h3>蔡依橙的閱讀筆記</h3>
+      <p>個人部落格。醫學、教育、閱讀、國際觀察、小孩教養，什麼都聊。</p>
+      <div class="card-meta">
+        <span class="card-tag" style="background:#F0E6DB;color:#5C4A3A;">部落格</span>
+        <span class="card-views"><span class="site-count" data-site="ic-blog">—</span></span>
+      </div>
+    </div>
+  </a>
+
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  IC 的個人研究室｜好奇心驅動，Claude 協作產出<br>
+  最後更新：2026-04-02
+</footer>
+
+<!-- ===== Scripts ===== -->
+<script>
+// Supabase 計數器
+const SUPABASE_URL = 'https://dypkogwrsqtonefaodiv.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5cGtvZ3dyc3F0b25lZmFvZGl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MDg2NzMsImV4cCI6MjA4OTk4NDY3M30.Qqh4V7_yumS5TnrV5Eora6VrC3T1bjbdTl7Pd2s-Tw4';
+
+// 本頁計數
+fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_page_view`, {
+  method: 'POST',
+  headers: {
+    'apikey': SUPABASE_KEY,
+    'Authorization': `Bearer ${SUPABASE_KEY}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ site: 'ic-lab' })
+})
+  .then(r => r.json())
+  .then(count => {
+    document.getElementById('counter').textContent = count + ' 次瀏覽';
+  })
+  .catch(() => {});
+
+// 各子站瀏覽數（讀取，不 increment）
+fetch(`${SUPABASE_URL}/rest/v1/page_views?select=site_id,count`, {
+  headers: {
+    'apikey': SUPABASE_KEY,
+    'Authorization': `Bearer ${SUPABASE_KEY}`
+  }
+})
+  .then(r => r.json())
+  .then(rows => {
+    // 加總每個 site 的所有日期
+    const totals = {};
+    rows.forEach(r => {
+      totals[r.site_id] = (totals[r.site_id] || 0) + r.count;
+    });
+    // 顯示數字（超過千用逗號分隔）
+    document.querySelectorAll('.site-count').forEach(el => {
+      const site = el.dataset.site;
+      if (totals[site]) el.textContent = totals[site].toLocaleString() + ' 次瀏覽';
+    });
+    // 排序：HTML 順序 = 最新更新在前，pinned-last（部落格）固定最後
+    const grid = document.getElementById('projectGrid');
+    const pinned = [...grid.querySelectorAll('.pinned-last')];
+    pinned.forEach(card => grid.appendChild(card));
+  })
+  .catch(() => {});
+
+// 篩選功能
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      if (filter === 'all' || card.dataset.tag === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
