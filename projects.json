@@ -1,5 +1,16 @@
 [
   {
+    "repo": "us-mba-guide",
+    "url": "https://ichentsai.tw/us-mba-guide/",
+    "title": "美國商學院 MBA 選校指南",
+    "desc": "前 30 名商學院深度分析，含十大次專領域薪資地圖，M7 到廣泛佳選完整比較。台灣學生版。",
+    "tag": "生涯輾導",
+    "emoji": "🎓",
+    "site_id": "us-mba-guide",
+    "date": "2026-04-03",
+    "pinned": false
+  },
+  {
     "repo": "cy-university",
     "url": "https://ichentsaitw.github.io/cy-university/",
     "title": "留學申請觀察筆記",
