@@ -104,7 +104,7 @@
   <div class="hero-cover"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Laptop_on_desk_book_stacks_(Unsplash).jpg/1280px-Laptop_on_desk_book_stacks_(Unsplash).jpg" alt="書桌筆電書堆" width="1280" height="853"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>IC 的個人研究室</h1>
+    <h1><a href="#" id="homeReset" style="color:inherit;text-decoration:none;">IC 的個人研究室</a></h1>
     <p class="subtitle">好奇一件事 → 研究它 → 做成網頁 → 作為筆記並跟朋友們討論。這裡收錄所有成果。</p>
     <div class="counter-bar"><span id="counter">— 次瀏覽</span></div>
     <div style="margin-top:.5rem;font-size:.75rem;color:rgba(255,255,255,.55);letter-spacing:.03em;">最近更新 2026/4/3 · Purdue 新生指南更新住宿、SAT favicon 更新</div>
@@ -460,6 +460,20 @@ if (searchEl) {
 }
 
 document.querySelectorAll('.pinned-last').forEach(c => document.getElementById('projectGrid').appendChild(c));
+
+document.getElementById('homeReset').addEventListener('click', e => {
+  e.preventDefault();
+  // 清除搜尋
+  searchQuery = '';
+  if (searchEl) searchEl.value = '';
+  // 重設 filter 為全部
+  activeTag = 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.filter === 'all');
+  });
+  applyFilter();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 </script>
 </body>
 </html>
