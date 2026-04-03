@@ -58,7 +58,9 @@
   .filter-btn:hover { border-color:var(--accent); color:var(--accent); }
   .filter-btn.active { background:var(--accent); color:white; border-color:var(--accent); }
 
-  .search-input { padding:6px 16px; border-radius:30px; border:1.5px solid var(--border); background:transparent; color:var(--text); font-size:0.88em; font-weight:500; font-family:inherit; outline:none; min-width:160px; transition:border-color 0.2s; }
+  .search-wrap { position:relative; display:inline-flex; align-items:center; }
+  .search-icon { position:absolute; left:12px; font-size:0.9em; pointer-events:none; line-height:1; }
+  .search-input { padding:6px 16px 6px 32px; border-radius:30px; border:1.5px solid var(--border); background:transparent; color:var(--text); font-size:0.88em; font-weight:500; font-family:inherit; outline:none; min-width:160px; transition:border-color 0.2s; }
   .search-input:focus { border-color:var(--accent); }
   .search-input::placeholder { color:var(--text-muted); }
 
@@ -114,7 +116,7 @@
     <button class="filter-btn active" data-filter="all">全部</button>
     <button class="filter-btn" data-filter="文化閱讀">文化閱讀</button>
     <button class="filter-btn" data-filter="大學相關">大學相關</button>
-    <input type="text" id="icSearch" class="search-input" placeholder="🔍 搜尋內容…" autocomplete="off">
+    <div class="search-wrap"><span class="search-icon">🔍</span><input type="text" id="icSearch" class="search-input" placeholder="搜尋內容…" autocomplete="off"></div>
   </div>
 </nav>
 
