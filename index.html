@@ -445,19 +445,17 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
+// Eager-load search index on page load (eliminates race condition when typing fast)
+fetch('/search-index.json?v=' + new Date().toISOString().slice(0,10))
+  .then(r => r.json())
+  .then(data => { searchIndex = data; })
+  .catch(() => { searchIndex = []; });
+
 const searchEl = document.getElementById('icSearch');
 if (searchEl) {
   searchEl.addEventListener('input', () => {
     searchQuery = searchEl.value;
-    if (searchQuery && !searchIndex) {
-      // Lazy-load index on first keystroke
-      fetch('/search-index.json?v=' + new Date().toISOString().slice(0,10))
-        .then(r => r.json())
-        .then(data => { searchIndex = data; applyFilter(); })
-        .catch(() => { searchIndex = []; applyFilter(); });
-    } else {
-      applyFilter();
-    }
+    applyFilter();
   });
 }
 
