@@ -58,6 +58,10 @@
   .filter-btn:hover { border-color:var(--accent); color:var(--accent); }
   .filter-btn.active { background:var(--accent); color:white; border-color:var(--accent); }
 
+  .search-input { padding:6px 16px; border-radius:30px; border:1.5px solid var(--border); background:transparent; color:var(--text); font-size:0.88em; font-weight:500; font-family:inherit; outline:none; min-width:160px; transition:border-color 0.2s; }
+  .search-input:focus { border-color:var(--accent); }
+  .search-input::placeholder { color:var(--text-muted); }
+
   .grid { max-width:900px; margin:0 auto; padding:0 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; }
   .project-card { background:var(--card-bg); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--border); transition:transform 0.2s,box-shadow 0.2s; text-decoration:none; color:inherit; display:flex; flex-direction:column; }
   .project-card:hover { transform:translateY(-4px); box-shadow:0 4px 12px rgba(44,40,37,0.08),0 16px 40px rgba(44,40,37,0.06); }
@@ -72,7 +76,7 @@
   .card-tag { display:inline-block; padding:3px 10px; border-radius:20px; font-size:0.75em; font-weight:700; }
   .card-views { font-size:0.78em; color:var(--text-muted); }
   .tag-文化閱讀 { background:#FDE8D8; color:#C13B2C; }
-  .tag-升學輔導 { background:#E8EEF8; color:#1B3A6B; }
+  .tag-大學相關 { background:#E8EEF8; color:#1B3A6B; }
 
   footer { text-align:center; padding:20px; color:var(--text-muted); font-size:0.8em; border-top:1px solid var(--border); max-width:900px; margin:0 auto 40px; }
   .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
@@ -109,7 +113,8 @@
   <div class="filter-inner">
     <button class="filter-btn active" data-filter="all">全部</button>
     <button class="filter-btn" data-filter="文化閱讀">文化閱讀</button>
-    <button class="filter-btn" data-filter="升學輔導">升學輔導</button>
+    <button class="filter-btn" data-filter="大學相關">大學相關</button>
+    <input type="text" id="icSearch" class="search-input" placeholder="🔍 搜尋內容…" autocomplete="off">
   </div>
 </nav>
 
@@ -117,56 +122,56 @@
 <div class="grid" id="projectGrid">
 
   <!-- 2026-04-03 -->
-  <a href="https://ichentsai.tw/sat-reading-800/" target="_blank" class="project-card" data-tag="升學輔導" data-site="sat-reading-800">
+  <a href="https://ichentsai.tw/sat-reading-800/" target="_blank" class="project-card" data-tag="大學相關" data-site="sat-reading-800">
     <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Study_Break_-_Reading_at_Tulane_University%2C_2009.jpg/640px-Study_Break_-_Reading_at_Tulane_University%2C_2009.jpg" alt="SAT 閱讀備考學生" loading="lazy" width="640" height="425"></div>
     <div class="card-body">
       <p class="card-date">2026-04-03</p>
       <h3>SAT 閱讀衝 800 完全攻略</h3>
       <p>不是讀更多，是錯更少——數學強的你，轉換思維就能突破。</p>
       <div class="card-meta">
-        <span class="card-tag tag-升學輔導">升學輔導</span>
+        <span class="card-tag tag-大學相關">大學相關</span>
         <span class="card-views"><span class="site-count" data-site="sat-reading-800">—</span></span>
       </div>
     </div>
   </a>
 
   <!-- 2026-04-03 -->
-  <a href="https://ichentsai.tw/us-ee-university-guide/" target="_blank" class="project-card" data-tag="升學輔導" data-site="us-ee-university-guide">
+  <a href="https://ichentsai.tw/us-ee-university-guide/" target="_blank" class="project-card" data-tag="大學相關" data-site="us-ee-university-guide">
     <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/MIT_Building_10_and_the_Great_Dome%2C_Cambridge_MA.jpg/960px-MIT_Building_10_and_the_Great_Dome%2C_Cambridge_MA.jpg" alt="美國大學工程排名前 30 選校指南" loading="lazy" style="object-position:center center;"></div>
     <div class="card-body">
       <p class="card-date">2026-04-03</p>
       <h3>美國大學工程排名前 30 選校指南</h3>
       <p>美國電機工程（Electrical Engineering）前 30 名大學的研究與整理。</p>
       <div class="card-meta">
-        <span class="card-tag tag-升學輔導">升學輔導</span>
+        <span class="card-tag tag-大學相關">大學相關</span>
         <span class="card-views"><span class="site-count" data-site="us-ee-university-guide">—</span></span>
       </div>
     </div>
   </a>
 
   <!-- 2026-04-02 -->
-  <a href="https://ichentsai.tw/pd-freshman-guide/" target="_blank" class="project-card" data-tag="升學輔導" data-site="pd-freshman-guide">
+  <a href="https://ichentsai.tw/pd-freshman-guide/" target="_blank" class="project-card" data-tag="大學相關" data-site="pd-freshman-guide">
     <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Purdue_Engineering_Fountain.JPG" alt="美國理工名校新生完全指南" loading="lazy" style="object-position:center center;"></div>
     <div class="card-body">
       <p class="card-date">2026-04-02</p>
       <h3>美國理工名校新生完全指南</h3>
       <p>台灣國際學生入學前後完整攻略：簽證 I-20、宿舍、Meal Plan、選課策略、SSN、駕照考取，一頁搞定。</p>
       <div class="card-meta">
-        <span class="card-tag tag-升學輔導">升學輔導</span>
+        <span class="card-tag tag-大學相關">大學相關</span>
         <span class="card-views"><span class="site-count" data-site="purdue-freshman-guide">—</span></span>
       </div>
     </div>
   </a>
 
   <!-- 2026-04-02 -->
-  <a href="https://ichentsai.tw/admission-results/" target="_blank" class="project-card" data-tag="升學輔導" data-site="admission-results">
+  <a href="https://ichentsai.tw/admission-results/" target="_blank" class="project-card" data-tag="大學相關" data-site="admission-results">
     <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/AUN_Students_in_Graduation_Gowns.jpg/960px-AUN_Students_in_Graduation_Gowns.jpg" alt="J's 美國大學錄取結果" loading="lazy" style="object-position:center top;"></div>
     <div class="card-body">
       <p class="card-date">2026-04-02</p>
       <h3>J's 美國大學錄取結果｜工程排名比較</h3>
       <p>五所錄取校 vs 台大，USN / THE / QS 三大排名系統對照。</p>
       <div class="card-meta">
-        <span class="card-tag tag-升學輔導">升學輔導</span>
+        <span class="card-tag tag-大學相關">大學相關</span>
         <span class="card-views"><span class="site-count" data-site="admission-results">—</span></span>
       </div>
     </div>
@@ -228,42 +233,42 @@
   </a>
 
   <!-- 2026-04-01 -->
-  <a href="https://ichentsai.tw/cy-university/" target="_blank" class="project-card" data-tag="升學輔導" data-site="cy-university">
+  <a href="https://ichentsai.tw/cy-university/" target="_blank" class="project-card" data-tag="大學相關" data-site="cy-university">
     <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Stanford_University_Main_Quad_western_archway.JPG/960px-Stanford_University_Main_Quad_western_archway.JPG" alt="留學申請觀察筆記" loading="lazy" style="object-position:center center;"></div>
     <div class="card-body">
       <p class="card-date">2026-04-01</p>
       <h3>留學申請觀察筆記</h3>
       <p>從一次完整申請季的結果，分析 Early vs Regular 的結構性差異，以及如何調整策略。</p>
       <div class="card-meta">
-        <span class="card-tag tag-升學輔導">升學輔導</span>
+        <span class="card-tag tag-大學相關">大學相關</span>
         <span class="card-views"><span class="site-count" data-site="cy-university">—</span></span>
       </div>
     </div>
   </a>
 
   <!-- 2026-04-01 -->
-  <a href="https://ichentsai.tw/dc-travel-guide/" target="_blank" class="project-card" data-tag="升學輔導" data-site="dc-travel-guide">
+  <a href="https://ichentsai.tw/dc-travel-guide/" target="_blank" class="project-card" data-tag="大學相關" data-site="dc-travel-guide">
     <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/US_Capitol_west_side.JPG" alt="Washington DC 深度旅遊指南" loading="lazy" style="object-position:center center;"></div>
     <div class="card-body">
       <p class="card-date">2026-04-01</p>
       <h3>Washington DC 深度旅遊指南</h3>
       <p>全世界最密集的博物館群，近代史紀念館，自然、航太、歷史全部免費。走路就能完成的文化深度遊。</p>
       <div class="card-meta">
-        <span class="card-tag tag-升學輔導">升學輔導</span>
+        <span class="card-tag tag-大學相關">大學相關</span>
         <span class="card-views"><span class="site-count" data-site="dc-travel-guide">—</span></span>
       </div>
     </div>
   </a>
 
   <!-- 2026-03-31 -->
-  <a href="https://ichentsai.tw/gt-waitlist-guide/" target="_blank" class="project-card" data-tag="升學輔導" data-site="gt-waitlist-guide">
+  <a href="https://ichentsai.tw/gt-waitlist-guide/" target="_blank" class="project-card" data-tag="大學相關" data-site="gt-waitlist-guide">
     <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Georgia_Tech_campus.jpg/960px-Georgia_Tech_campus.jpg" alt="頂尖理工大學備取完全攻略" loading="lazy" style="object-position:center center;"></div>
     <div class="card-body">
       <p class="card-date">2026-03-31</p>
       <h3>頂尖理工大學備取完全攻略</h3>
       <p>美國頂尖理工校 Waitlist 怎麼運作？歷年錄取率、決策時間軸、該做什麼不該做什麼，一頁說清楚。</p>
       <div class="card-meta">
-        <span class="card-tag tag-升學輔導">升學輔導</span>
+        <span class="card-tag tag-大學相關">大學相關</span>
         <span class="card-views"><span class="site-count" data-site="gt-waitlist-guide">—</span></span>
       </div>
     </div>
@@ -401,16 +406,58 @@ fetch(`${SUPABASE_URL}/rest/v1/page_views?select=site_id,count`, {
   });
 }).catch(() => {});
 
+// ── Filter + Search ──────────────────────────────────────
+let activeTag = 'all';
+let searchIndex = null;
+let searchQuery = '';
+
+function applyFilter() {
+  const q = searchQuery.trim().toLowerCase();
+  document.querySelectorAll('.project-card').forEach(card => {
+    const tagOk = (activeTag === 'all' || card.dataset.tag === activeTag);
+    let searchOk = true;
+    if (q) {
+      // Check card DOM text first (fast)
+      const cardText = card.textContent.toLowerCase();
+      if (cardText.includes(q)) {
+        searchOk = true;
+      } else if (searchIndex) {
+        // Check full indexed content
+        const siteId = card.dataset.site;
+        const entry = searchIndex.find(e => e.site === siteId);
+        searchOk = entry ? entry.content.toLowerCase().includes(q) : false;
+      } else {
+        searchOk = false; // index not loaded yet, hide until loaded
+      }
+    }
+    card.style.display = (tagOk && searchOk) ? '' : 'none';
+  });
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.project-card').forEach(card => {
-      card.style.display = (f === 'all' || card.dataset.tag === f) ? '' : 'none';
-    });
+    activeTag = btn.dataset.filter;
+    applyFilter();
   });
 });
+
+const searchEl = document.getElementById('icSearch');
+if (searchEl) {
+  searchEl.addEventListener('input', () => {
+    searchQuery = searchEl.value;
+    if (searchQuery && !searchIndex) {
+      // Lazy-load index on first keystroke
+      fetch('/search-index.json')
+        .then(r => r.json())
+        .then(data => { searchIndex = data; applyFilter(); })
+        .catch(() => { searchIndex = []; applyFilter(); });
+    } else {
+      applyFilter();
+    }
+  });
+}
 
 document.querySelectorAll('.pinned-last').forEach(c => document.getElementById('projectGrid').appendChild(c));
 </script>
