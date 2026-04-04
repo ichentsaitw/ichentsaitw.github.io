@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="蔡依橙的個人研究室，收錄美國大學留學分析、K-POP 商業觀察、AI 素養親子教育、文化議題深度研究等成果。好奇一件事，研究它，做成網頁，和朋友討論。">
+<meta name="description" content="收錄美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等主題的完整研究成果。每篇都是從好奇心出發、認真整理分析後的筆記，也是用來跟朋友討論的素材。">
 <meta name="keywords" content="IC,研究室,生涯輔導,K-pop,人物研究,科技,AI,Claude">
 <meta name="author" content="IC">
 <link rel="canonical" href="https://ichentsai.tw/">
@@ -14,14 +14,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ichentsai.tw/">
 <meta property="og:title" content="蔡依橙的個人研究室">
-<meta property="og:description" content="蔡依橙的個人研究室，收錄美國大學留學分析、K-POP 商業觀察、AI 素養親子教育、文化議題深度研究等成果。好奇一件事，研究它，做成網頁，和朋友討論。">
+<meta property="og:description" content="收錄美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等主題的完整研究成果。每篇都是從好奇心出發、認真整理分析後的筆記，也是用來跟朋友討論的素材。">
 <meta property="og:image" content="images/cards/hero-laptop.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="628">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="蔡依橙的個人研究室">
-<meta name="twitter:description" content="蔡依橙的個人研究室，收錄美國大學留學分析、K-POP 商業觀察、AI 素養親子教育、文化議題深度研究等成果。好奇一件事，研究它，做成網頁，和朋友討論。">
+<meta name="twitter:description" content="收錄美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等主題的完整研究成果。每篇都是從好奇心出發、認真整理分析後的筆記，也是用來跟朋友討論的素材。">
 <meta name="twitter:image" content="images/cards/hero-laptop.jpg">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W62W54P820"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W62W54P820');</script>
@@ -105,10 +105,9 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1><a href="#" id="homeReset" style="color:inherit;text-decoration:none;">蔡依橙的個人研究室</a></h1>
-    <p class="subtitle">好奇一件事 → 研究它 → 做成網頁 → 作為筆記並跟朋友們討論。這裡收錄所有成果。</p>
-    <p class="subtitle" style="margin-top:.4em;font-size:.9em;opacity:.8;">主題橫跨大學申請、文化娛樂觀察、親子 AI 教育，每篇都是認真研究的成果。</p>
+    <p class="subtitle">這裡記錄了許多我曾經好奇過、認真收集資訊並整理分析的主題。涵蓋美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等議題，每篇都是完整的研究成果，也是我用來跟朋友們討論的素材。</p>
     <div class="counter-bar"><span id="counter">— 次瀏覽</span></div>
-    <div style="margin-top:.5rem;font-size:.75rem;color:rgba(255,255,255,.55);letter-spacing:.03em;">最近更新 2026/4/4 · 赴美升學科系分析上線</div>
+    <div style="margin-top:.5rem;font-size:.75rem;color:rgba(255,255,255,.55);letter-spacing:.03em;">最近更新 <span id="last-update-date">2026/4/5</span><span id="last-update-note"> · 赴美升學科系分析上線</span></div>
   </div>
 </div>
 
@@ -521,6 +520,20 @@ document.getElementById('homeReset').addEventListener('click', e => {
   applyFilter();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// ── 自動同步最近更新日期 ─────────────────────────────────────
+(function() {
+  const dates = Array.from(document.querySelectorAll('.card-date'))
+    .map(el => el.textContent.trim())
+    .filter(d => /\d{4}\/\d+\/\d+/.test(d))
+    .map(d => { const p = d.split('/'); return new Date(p[0], p[1]-1, p[2]); })
+    .filter(d => !isNaN(d));
+  if (!dates.length) return;
+  const latest = new Date(Math.max(...dates));
+  const formatted = `${latest.getFullYear()}/${latest.getMonth()+1}/${latest.getDate()}`;
+  const el = document.getElementById('last-update-date');
+  if (el) el.textContent = formatted;
+})();
 </script>
 </body>
 </html>
