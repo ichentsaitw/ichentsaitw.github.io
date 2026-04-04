@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  const MANIFEST = 'https://ichentsaitw.github.io/projects.json';
+  const MANIFEST = 'https://ichentsai.tw/projects.json';
 
   function init() {
     var el = document.getElementById('related-pages');
