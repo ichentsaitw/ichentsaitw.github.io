@@ -21,15 +21,46 @@
       .catch(function () {});
   }
 
-  function score(kwA, kwB) {
+  // Tag groups：同組的站視為相關，不同組降權
+  var TAG_GROUPS = [
+    ['文化閱讀', 'K-pop', '趣味', '人物研究', 'IP分析', '文化觀察'],
+    ['大學相關', '教育'],
+    ['科技'],
+    ['旅遊'],
+    ['部落格']
+  ];
+
+  function tagGroupScore(tagA, tagB) {
+    if (!tagA || !tagB) return 0;
+    if (tagA === tagB) return 3;
+    for (var g = 0; g < TAG_GROUPS.length; g++) {
+      var grp = TAG_GROUPS[g];
+      if (grp.indexOf(tagA) !== -1 && grp.indexOf(tagB) !== -1) return 2;
+    }
+    return 0;
+  }
+
+  function kwScore(kwA, kwB) {
     var s = 0;
     for (var i = 0; i < kwA.length; i++) {
       for (var j = 0; j < kwB.length; j++) {
         if (kwA[i] === kwB[j]) s += 2;
-        else if (kwA[i].indexOf(kwB[j]) !== -1 || kwB[j].indexOf(kwA[i]) !== -1) s += 1;
+        else if (kwA[i].length > 1 && kwB[j].length > 1 &&
+                 (kwA[i].indexOf(kwB[j]) !== -1 || kwB[j].indexOf(kwA[i]) !== -1)) s += 1;
       }
     }
     return s;
+  }
+
+  // 最低相關分門檻：至少要有 1 個 keyword 精確 overlap（kwScore≥2）才顯示
+  // 純 tag 同組（score≤3）不夠，不顯示
+  var MIN_SCORE = 6;
+
+  function totalScore(current, candidate) {
+    var kw = kwScore(current.keywords || [], candidate.keywords || []);
+    var tg = tagGroupScore(current.tag || '', candidate.tag || '');
+    // keyword overlap 優先（×4），tag 同組加分作為 tiebreaker
+    return kw * 4 + tg;
   }
 
   function render(el, currentSite, projects) {
@@ -44,14 +75,18 @@
     });
 
     candidates.sort(function (a, b) {
-      var sa = score(current.keywords, a.keywords || []);
-      var sb = score(current.keywords, b.keywords || []);
+      var sa = totalScore(current, a);
+      var sb = totalScore(current, b);
       if (sb !== sa) return sb - sa;
       return (b.date > a.date) ? 1 : -1;
     });
 
-    var top = candidates.slice(0, 3);
-    if (!top.length) return;
+    // 只取達到最低門檻的，最多 3 筆
+    var top = candidates.filter(function (p) {
+      return totalScore(current, p) >= MIN_SCORE;
+    }).slice(0, 3);
+
+    if (!top.length) return;  // 沒有夠相關的，不顯示任何東西
 
     injectStyles();
 
