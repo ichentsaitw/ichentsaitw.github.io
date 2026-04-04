@@ -87,6 +87,7 @@
     "site_id": "admission-results",
     "date": "2026-04-02",
     "pinned": false,
+    "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/graduation.jpg",
     "keywords": ["美國大學", "錄取", "升學", "工程", "台灣學生", "排名", "選校"]
   },
@@ -139,6 +140,7 @@
     "site_id": "cy-university",
     "date": "2026-04-02",
     "pinned": false,
+    "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/stanford.jpg",
     "keywords": ["美國大學", "申請", "升學", "台灣學生", "Early", "策略", "選校"]
   },
@@ -152,6 +154,7 @@
     "site_id": "dc-travel-guide",
     "date": "2026-04-01",
     "pinned": false,
+    "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/us-capitol.jpg",
     "keywords": ["旅遊", "Washington DC", "博物館", "美國", "歷史", "免費"]
   },
@@ -165,6 +168,7 @@
     "site_id": "gt-waitlist-guide",
     "date": "2026-03-31",
     "pinned": false,
+    "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/georgia-tech.jpg",
     "keywords": ["美國大學", "備取", "升學", "台灣學生", "工程", "Georgia Tech", "選校"]
   },

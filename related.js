@@ -71,7 +71,7 @@
     if (!current || !current.keywords || !current.keywords.length) return;
 
     var candidates = projects.filter(function (p) {
-      return p.site_id !== currentSite && p.image && p.url;
+      return p.site_id !== currentSite && p.image && p.url && !p.hidden;
     });
 
     candidates.sort(function (a, b) {
