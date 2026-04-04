@@ -1,7 +1,7 @@
 [
   {
     "repo": "us-stay-rate",
-    "url": "https://ichentsaitw.github.io/us-stay-rate/",
+    "url": "https://ichentsai.tw/us-stay-rate/",
     "title": "赴美升學科系分析",
     "desc": "各科系留美前景 × H-1B 機率 × 起薪比較。科系選擇比努力更重要。",
     "tag": "大學相關",
@@ -10,7 +10,19 @@
     "date": "2026-04-04",
     "pinned": false,
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Gates-Hillman_Complex_at_Carnegie_Mellon_University.jpg/960px-Gates-Hillman_Complex_at_Carnegie_Mellon_University.jpg",
-    "keywords": ["美國大學", "科系", "H-1B", "OPT", "STEM", "留美", "升學", "台灣學生", "CS", "工程", "SAT"]
+    "keywords": [
+      "美國大學",
+      "科系",
+      "H-1B",
+      "OPT",
+      "STEM",
+      "留美",
+      "升學",
+      "台灣學生",
+      "CS",
+      "工程",
+      "SAT"
+    ]
   },
   {
     "repo": "sat-reading-800",
@@ -23,7 +35,15 @@
     "date": "2026-04-03",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/sat-reading.jpg",
-    "keywords": ["SAT", "考試", "升學", "美國大學", "英語", "閱讀", "台灣學生"]
+    "keywords": [
+      "SAT",
+      "考試",
+      "升學",
+      "美國大學",
+      "英語",
+      "閱讀",
+      "台灣學生"
+    ]
   },
   {
     "repo": "milk-guide",
@@ -36,7 +56,16 @@
     "date": "2026-04-03",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/milk-dairy.jpg",
-    "keywords": ["牛乳", "食品", "消費", "安佳", "進口", "紐西蘭", "中資", "品牌"]
+    "keywords": [
+      "牛乳",
+      "食品",
+      "消費",
+      "安佳",
+      "進口",
+      "紐西蘭",
+      "中資",
+      "品牌"
+    ]
   },
   {
     "repo": "us-mba-guide",
@@ -49,20 +78,40 @@
     "date": "2026-04-03",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/mba-harvard.jpg",
-    "keywords": ["MBA", "商學院", "美國大學", "GMAT", "生涯", "升學", "台灣學生", "薪資", "工作"]
+    "keywords": [
+      "MBA",
+      "商學院",
+      "美國大學",
+      "GMAT",
+      "生涯",
+      "升學",
+      "台灣學生",
+      "薪資",
+      "工作"
+    ]
   },
   {
-    "repo": "purdue-freshman-guide",
-    "url": "https://ichentsaitw.github.io/purdue-freshman-guide/",
+    "repo": "pd-freshman-guide",
+    "url": "https://ichentsai.tw/pd-freshman-guide/",
     "title": "美國理工名校新生完全指南",
     "desc": "台灣國際學生入學前後攻略：簽證 I-20、宿舍、選課策略、SSN、駕照，一頁搞定。",
     "tag": "大學相關",
     "emoji": "🚂",
-    "site_id": "purdue-freshman-guide",
+    "site_id": "pd-freshman-guide",
     "date": "2026-04-03",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/purdue-fountain.jpg",
-    "keywords": ["美國大學", "新生", "升學", "簽證", "I-20", "台灣學生", "宿舍", "選課", "Purdue"]
+    "keywords": [
+      "美國大學",
+      "新生",
+      "升學",
+      "簽證",
+      "I-20",
+      "台灣學生",
+      "宿舍",
+      "選課",
+      "Purdue"
+    ]
   },
   {
     "repo": "us-ee-university-guide",
@@ -75,11 +124,21 @@
     "date": "2026-04-03",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/mit-dome.jpg",
-    "keywords": ["EE", "電機工程", "美國大學", "升學", "H-1B", "OPT", "台灣學生", "工程", "選校"]
+    "keywords": [
+      "EE",
+      "電機工程",
+      "美國大學",
+      "升學",
+      "H-1B",
+      "OPT",
+      "台灣學生",
+      "工程",
+      "選校"
+    ]
   },
   {
     "repo": "admission-results",
-    "url": "https://ichentsaitw.github.io/admission-results/",
+    "url": "https://ichentsai.tw/admission-results/",
     "title": "J's 美國大學錄取結果｜工程排名比較",
     "desc": "五所錄取校 vs 台大，USN / THE / QS 三大排名系統對照分析。",
     "tag": "大學相關",
@@ -89,11 +148,19 @@
     "pinned": false,
     "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/graduation.jpg",
-    "keywords": ["美國大學", "錄取", "升學", "工程", "台灣學生", "排名", "選校"]
+    "keywords": [
+      "美國大學",
+      "錄取",
+      "升學",
+      "工程",
+      "台灣學生",
+      "排名",
+      "選校"
+    ]
   },
   {
     "repo": "chef-my-fridge-analysis",
-    "url": "https://ichentsaitw.github.io/chef-my-fridge-analysis/",
+    "url": "https://ichentsai.tw/chef-my-fridge-analysis/",
     "title": "拜託了冰箱｜打開冰箱的那 3 秒鐘",
     "desc": "一個韓國綜藝節目，藏著關於限制、直覺與真正專業力的深層問題。",
     "tag": "文化閱讀",
@@ -102,7 +169,14 @@
     "date": "2026-04-02",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/bibimbap.jpg",
-    "keywords": ["韓國", "綜藝", "料理", "文化", "專業", "創意"]
+    "keywords": [
+      "韓國",
+      "綜藝",
+      "料理",
+      "文化",
+      "專業",
+      "創意"
+    ]
   },
   {
     "repo": "ic-blog",
@@ -115,11 +189,18 @@
     "date": "2026-04-02",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/journaling.jpg",
-    "keywords": ["部落格", "閱讀", "教養", "觀點", "醫療", "教育"]
+    "keywords": [
+      "部落格",
+      "閱讀",
+      "教養",
+      "觀點",
+      "醫療",
+      "教育"
+    ]
   },
   {
     "repo": "ai-literacy-workshop",
-    "url": "https://ichentsaitw.github.io/ai-literacy-workshop/",
+    "url": "https://ichentsai.tw/ai-literacy-workshop/",
     "title": "AI 素養教育工作坊",
     "desc": "AI 時代父母最需要的一堂課。從好奇心出發，讓 AI 賦能孩子的探索，家長示範、一起實作。",
     "tag": "教育",
@@ -128,11 +209,19 @@
     "date": "2026-04-02",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/coding-kids.jpg",
-    "keywords": ["AI", "教育", "工作坊", "小孩", "教養", "科技", "素養"]
+    "keywords": [
+      "AI",
+      "教育",
+      "工作坊",
+      "小孩",
+      "教養",
+      "科技",
+      "素養"
+    ]
   },
   {
     "repo": "cy-university",
-    "url": "https://ichentsaitw.github.io/cy-university/",
+    "url": "https://ichentsai.tw/cy-university/",
     "title": "留學申請觀察筆記",
     "desc": "從一次完整申請季的結果，分析 Early vs Regular 的結構性差異，以及如何調整策略。",
     "tag": "大學相關",
@@ -142,11 +231,19 @@
     "pinned": false,
     "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/stanford.jpg",
-    "keywords": ["美國大學", "申請", "升學", "台灣學生", "Early", "策略", "選校"]
+    "keywords": [
+      "美國大學",
+      "申請",
+      "升學",
+      "台灣學生",
+      "Early",
+      "策略",
+      "選校"
+    ]
   },
   {
     "repo": "dc-travel-guide",
-    "url": "https://ichentsaitw.github.io/dc-travel-guide/",
+    "url": "https://ichentsai.tw/dc-travel-guide/",
     "title": "Washington DC 深度旅遊指南",
     "desc": "免費博物館群密度全球第一，從航太博物館到自然史博物館，三天根本走不完。",
     "tag": "旅遊",
@@ -156,11 +253,18 @@
     "pinned": false,
     "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/us-capitol.jpg",
-    "keywords": ["旅遊", "Washington DC", "博物館", "美國", "歷史", "免費"]
+    "keywords": [
+      "旅遊",
+      "Washington DC",
+      "博物館",
+      "美國",
+      "歷史",
+      "免費"
+    ]
   },
   {
     "repo": "gt-waitlist-guide",
-    "url": "https://ichentsaitw.github.io/gt-waitlist-guide/",
+    "url": "https://ichentsai.tw/gt-waitlist-guide/",
     "title": "頂尖理工大學備取完全攻略",
     "desc": "美國頂尖理工校 Waitlist 怎麼運作？歷年錄取率、決策時間軸、該做什麼不該做什麼。",
     "tag": "大學相關",
@@ -170,11 +274,19 @@
     "pinned": false,
     "hidden": true,
     "image": "https://ichentsaitw.github.io/images/cards/georgia-tech.jpg",
-    "keywords": ["美國大學", "備取", "升學", "台灣學生", "工程", "Georgia Tech", "選校"]
+    "keywords": [
+      "美國大學",
+      "備取",
+      "升學",
+      "台灣學生",
+      "工程",
+      "Georgia Tech",
+      "選校"
+    ]
   },
   {
     "repo": "kpop-big4-analysis",
-    "url": "https://ichentsaitw.github.io/kpop-big4-analysis/",
+    "url": "https://ichentsai.tw/kpop-big4-analysis/",
     "title": "K-POP 四大經紀公司｜誰賺最多？誰的藝人最幸福？",
     "desc": "SM、YG、JYP、HYBE——分潤結構、練習生人權、創辦人接班、粉絲經濟全解析。",
     "tag": "文化閱讀",
@@ -183,11 +295,22 @@
     "date": "2026-03-27",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/kpop-expo.jpg",
-    "keywords": ["K-pop", "SM", "YG", "JYP", "HYBE", "韓國", "音樂", "偶像", "商業", "娛樂"]
+    "keywords": [
+      "K-pop",
+      "SM",
+      "YG",
+      "JYP",
+      "HYBE",
+      "韓國",
+      "音樂",
+      "偶像",
+      "商業",
+      "娛樂"
+    ]
   },
   {
     "repo": "claude-research",
-    "url": "https://ichentsaitw.github.io/claude-research/",
+    "url": "https://ichentsai.tw/claude-research/",
     "title": "Anthropic 深度研究：Claude 為何能殺出血路？",
     "desc": "從 OpenAI 出走的 11 人，如何用「安全優先」打造史上最快企業軟體公司。",
     "tag": "科技",
@@ -196,11 +319,20 @@
     "date": "2026-03-26",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/dario-amodei.jpg",
-    "keywords": ["AI", "Anthropic", "Claude", "科技", "OpenAI", "創業", "新創", "人物"]
+    "keywords": [
+      "AI",
+      "Anthropic",
+      "Claude",
+      "科技",
+      "OpenAI",
+      "創業",
+      "新創",
+      "人物"
+    ]
   },
   {
     "repo": "aespa-analysis",
-    "url": "https://ichentsaitw.github.io/aespa-analysis/",
+    "url": "https://ichentsai.tw/aespa-analysis/",
     "title": "深入了解 aespa｜從練習生到舞台背後的真實故事",
     "desc": "十億美元併購案、Supernova 神曲、過勞真相——給粉絲的商業世界入門讀物。",
     "tag": "文化閱讀",
@@ -209,11 +341,20 @@
     "date": "2026-03-26",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/aespa.jpg",
-    "keywords": ["K-pop", "aespa", "SM", "韓國", "音樂", "偶像", "娛樂", "商業"]
+    "keywords": [
+      "K-pop",
+      "aespa",
+      "SM",
+      "韓國",
+      "音樂",
+      "偶像",
+      "娛樂",
+      "商業"
+    ]
   },
   {
     "repo": "sam-altman-story",
-    "url": "https://ichentsaitw.github.io/sam-altman-story/",
+    "url": "https://ichentsai.tw/sam-altman-story/",
     "title": "Sam Altman 背景研究",
     "desc": "搭配《The Optimist》閱讀，整理 Sam Altman 的人生時間軸、創業歷程與爭議事件。",
     "tag": "人物研究",
@@ -222,11 +363,19 @@
     "date": "2026-03-25",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/sam-altman.jpg",
-    "keywords": ["AI", "Sam Altman", "OpenAI", "科技", "人物", "創業", "新創"]
+    "keywords": [
+      "AI",
+      "Sam Altman",
+      "OpenAI",
+      "科技",
+      "人物",
+      "創業",
+      "新創"
+    ]
   },
   {
     "repo": "blackpink-guide",
-    "url": "https://ichentsaitw.github.io/blackpink-guide/",
+    "url": "https://ichentsai.tw/blackpink-guide/",
     "title": "認識 BLACKPINK｜商業模式與合約策略全解析",
     "desc": "四個人如何改寫 K-pop 的商業規則——從練習生到精品代言人。",
     "tag": "文化閱讀",
@@ -235,11 +384,20 @@
     "date": "2026-03-25",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/blackpink.jpg",
-    "keywords": ["K-pop", "BLACKPINK", "YG", "韓國", "音樂", "偶像", "商業", "娛樂"]
+    "keywords": [
+      "K-pop",
+      "BLACKPINK",
+      "YG",
+      "韓國",
+      "音樂",
+      "偶像",
+      "商業",
+      "娛樂"
+    ]
   },
   {
     "repo": "shahimi-guide",
-    "url": "https://ichentsaitw.github.io/shahimi-guide/",
+    "url": "https://ichentsai.tw/shahimi-guide/",
     "title": "胖鯊魚鯊西米｜情報整理",
     "desc": "台灣 LINE 貼圖 IP 的商業分析。從分潤機制到收入天花板，給國中生的研究入門。",
     "tag": "文化閱讀",
@@ -248,11 +406,18 @@
     "date": "2026-03-25",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/shark.jpg",
-    "keywords": ["LINE貼圖", "IP", "商業", "台灣", "創作", "分潤"]
+    "keywords": [
+      "LINE貼圖",
+      "IP",
+      "商業",
+      "台灣",
+      "創作",
+      "分潤"
+    ]
   },
   {
     "repo": "denryu",
-    "url": "https://ichentsaitw.github.io/denryu/",
+    "url": "https://ichentsai.tw/denryu/",
     "title": "蔥盟寶可夢圖鑑",
     "desc": "電龍、小火龍、傑尼龜、胖丁的互動式圖鑑網頁。蔥盟知名寶可夢大集合。",
     "tag": "趣味",
@@ -261,7 +426,16 @@
     "date": "2026-03-22",
     "pinned": false,
     "image": "https://ichentsaitw.github.io/images/cards/pikachu.jpg",
-    "keywords": ["寶可夢", "趣味", "遊戲", "互動", "圖鑑", "文化", "娛樂", "日本"]
+    "keywords": [
+      "寶可夢",
+      "趣味",
+      "遊戲",
+      "互動",
+      "圖鑑",
+      "文化",
+      "娛樂",
+      "日本"
+    ]
   },
   {
     "repo": "",
@@ -274,6 +448,13 @@
     "date": "2020-01-01",
     "pinned": true,
     "image": "https://ichentsaitw.github.io/images/cards/journaling.jpg",
-    "keywords": ["部落格", "閱讀", "教養", "觀點", "醫療", "教育"]
+    "keywords": [
+      "部落格",
+      "閱讀",
+      "教養",
+      "觀點",
+      "醫療",
+      "教育"
+    ]
   }
 ]
