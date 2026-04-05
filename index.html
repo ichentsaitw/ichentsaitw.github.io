@@ -113,12 +113,9 @@
 </div>
 
 <nav class="filter-bar">
-  <div class="filter-inner">
+  <div class="filter-inner" id="filterInner">
     <button class="filter-btn active" data-filter="all">全部</button>
-    <button class="filter-btn" data-filter="大學相關">大學相關</button>
-    <button class="filter-btn" data-filter="文化閱讀">文化閱讀</button>
-    <button class="filter-btn" data-filter="科技觀察">科技觀察</button>
-    <button class="filter-btn" data-filter="關於我">關於我</button>
+    <!-- keyword buttons injected by JS -->
     <div class="search-wrap"><span class="search-icon">🔍</span><input type="text" id="icSearch" class="search-input" placeholder="搜尋內容…" autocomplete="off"></div>
   </div>
 </nav>
@@ -485,41 +482,89 @@ fetch(`${SUPABASE_URL}/rest/v1/page_views?select=site_id,count`, {
 }).catch(() => {});
 
 // ── Filter + Search ──────────────────────────────────────
-let activeTag = 'all';
+let activeKw = 'all';
 let searchIndex = null;
 let searchQuery = '';
+let kwMap = {}; // site_id → keywords[]
 
 function applyFilter() {
   const q = searchQuery.trim().toLowerCase();
   document.querySelectorAll('.project-card').forEach(card => {
-    const tagOk = (activeTag === 'all' || card.dataset.tag === activeTag);
+    const siteId = card.dataset.site;
+    const kws = kwMap[siteId] || [];
+    const kwOk = (activeKw === 'all' || kws.some(k => k === activeKw));
     let searchOk = true;
     if (q) {
-      // Check card DOM text first (fast)
       const cardText = card.textContent.toLowerCase();
       if (cardText.includes(q)) {
         searchOk = true;
       } else if (searchIndex) {
-        // Check full indexed content
-        const siteId = card.dataset.site;
         const entry = searchIndex.find(e => e.site === siteId);
         searchOk = entry ? entry.content.toLowerCase().includes(q) : false;
       } else {
-        searchOk = false; // index not loaded yet, hide until loaded
+        searchOk = false;
       }
     }
-    card.style.display = (tagOk && searchOk) ? '' : 'none';
+    card.style.display = (kwOk && searchOk) ? '' : 'none';
   });
 }
 
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeTag = btn.dataset.filter;
-    applyFilter();
+function bindFilterBtns() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeKw = btn.dataset.filter;
+      applyFilter();
+    });
   });
-});
+}
+bindFilterBtns();
+
+// ── 動態關鍵字按鈕（從 projects.json 統計 top10，session 隨機抽 3）──
+fetch('/projects.json?v=' + new Date().toISOString().slice(0,10))
+  .then(r => r.json())
+  .then(projects => {
+    // 建立 site_id → keywords 對照表
+    projects.forEach(p => { if (p.keywords) kwMap[p.site_id] = p.keywords; });
+
+    // 統計所有關鍵字頻率（優先中文）
+    const freq = {};
+    projects.forEach(p => {
+      (p.keywords || []).forEach(kw => { freq[kw] = (freq[kw] || 0) + 1; });
+    });
+
+    // top 10，中文優先（有中文字的排前面）
+    const top10 = Object.entries(freq)
+      .sort((a, b) => {
+        const hasCJKa = /[\u4e00-\u9fff]/.test(a[0]) ? 1 : 0;
+        const hasCJKb = /[\u4e00-\u9fff]/.test(b[0]) ? 1 : 0;
+        if (hasCJKb !== hasCJKa) return hasCJKb - hasCJKa;
+        return b[1] - a[1];
+      })
+      .slice(0, 10)
+      .map(([kw]) => kw);
+
+    // session 固定：每次造訪抽一次，關掉分頁才換
+    let chosen = JSON.parse(sessionStorage.getItem('ic_kw_btns') || 'null');
+    if (!chosen || !chosen.every(k => top10.includes(k))) {
+      const shuffled = [...top10].sort(() => Math.random() - 0.5);
+      chosen = shuffled.slice(0, 3);
+      sessionStorage.setItem('ic_kw_btns', JSON.stringify(chosen));
+    }
+
+    // 插入按鈕（在全部按鈕後、搜尋框前）
+    const searchWrap = document.querySelector('.search-wrap');
+    chosen.forEach(kw => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn';
+      btn.dataset.filter = kw;
+      btn.textContent = kw;
+      searchWrap.parentNode.insertBefore(btn, searchWrap);
+    });
+    bindFilterBtns();
+  })
+  .catch(() => {});
 
 // Eager-load search index on page load (eliminates race condition when typing fast)
 fetch('/search-index.json?v=' + new Date().toISOString().slice(0,10))
@@ -543,7 +588,7 @@ document.getElementById('homeReset').addEventListener('click', e => {
   searchQuery = '';
   if (searchEl) searchEl.value = '';
   // 重設 filter 為全部
-  activeTag = 'all';
+  activeKw = 'all';
   document.querySelectorAll('.filter-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.filter === 'all');
   });

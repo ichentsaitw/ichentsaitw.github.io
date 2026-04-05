@@ -1,5 +1,66 @@
 [
   {
+    "repo": "harness-engineering",
+    "url": "https://ichentsaitw.github.io/harness-engineering/",
+    "title": "Harness Engineering：讓 AI 真正聽得懂你在說什麼",
+    "desc": "光靠 prompt 已經不夠了。2025 年最重要的 AI 新概念，用你最熟悉的 AP 題庫解釋清楚。",
+    "tag": "科技觀察",
+    "emoji": "🎛️",
+    "site_id": "harness-engineering",
+    "date": "2026-04-05",
+    "pinned": false,
+    "image": "https://ichentsaitw.github.io/images/cards/harness-engineering.jpg",
+    "keywords": [
+      "AI", "harness", "高中生", "AP", "SAT", "教育", "學習", "系統設計", "科技", "題庫"
+    ]
+  },
+  {
+    "repo": "about",
+    "url": "https://iclab.ichentsai.tw/about/",
+    "title": "蔡依橙 — 醫師、創業者、教育工作者",
+    "desc": "好奇心後面的那個人。延伸連結、聯絡方式，在這裡。",
+    "tag": "關於我",
+    "emoji": "👤",
+    "site_id": "about",
+    "date": "2026-04-05",
+    "pinned": false,
+    "image": "https://ichentsaitw.github.io/images/cards/about-ic.jpg",
+    "keywords": [
+      "蔡依橙", "關於我", "IC", "醫師", "創業", "教育", "放射科", "InnovaRad"
+    ]
+  },
+  {
+    "repo": "APWH_GrandReview",
+    "url": "https://joboyoyo.github.io/APWH_GrandReview/",
+    "title": "AP World History 大複習",
+    "desc": "互動式世界史複習系統，涵蓋各時期重要事件、因果關係與跨時期比較。",
+    "tag": "教育",
+    "emoji": "🌍",
+    "site_id": "apwh",
+    "date": "2026-04-02",
+    "pinned": false,
+    "image": "https://ichentsaitw.github.io/images/cards/world-history.jpg",
+    "keywords": [
+      "AP", "APWH", "世界史", "高中生", "歷史", "考試", "複習", "教育", "升學"
+    ]
+  },
+  {
+    "repo": "cy-admission-strategy",
+    "url": "https://iclab.ichentsai.tw/cy-admission-strategy/",
+    "title": "留學申請觀察筆記",
+    "desc": "從一次完整申請季的結果，分析 Early vs Regular 的結構性差異，以及如何調整策略。",
+    "tag": "大學相關",
+    "emoji": "📘",
+    "site_id": "cy-admission-strategy",
+    "date": "2026-04-01",
+    "pinned": false,
+    "hidden": true,
+    "image": "https://ichentsaitw.github.io/images/cards/stanford.jpg",
+    "keywords": [
+      "美國大學", "申請", "升學", "台灣學生", "Early", "策略", "選校"
+    ]
+  },
+  {
     "repo": "us-stay-rate",
     "url": "https://ichentsai.tw/us-stay-rate/",
     "title": "赴美升學科系分析",
