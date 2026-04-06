@@ -1,5 +1,20 @@
 [
   {
+    "repo": "palantir-research",
+    "url": "https://iclab.ichentsai.tw/palantir-research/",
+    "title": "矽谷最危險的公司．Palantir：AI 國防巨獸與資訊整合的時代",
+    "desc": "從哲學家 Karp、資本家 Thiel，到 Ontology、Digital Twin——完整解析 Palantir 如何以資訊整合技術重塑世界權力格局。",
+    "tag": "科技人物",
+    "emoji": "🔮",
+    "site_id": "palantir-research",
+    "date": "2026-04-06",
+    "pinned": false,
+    "image": "https://ichentsaitw.github.io/images/cards/palantir-research.jpg",
+    "keywords": [
+      "Palantir", "AI", "科技", "人物", "商業", "創業", "新創", "矽谷", "國防", "情報"
+    ]
+  },
+  {
     "repo": "harness-engineering",
     "url": "https://ichentsaitw.github.io/harness-engineering/",
     "title": "Harness Engineering：讓 AI 真正聽得懂你在說什麼",

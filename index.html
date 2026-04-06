@@ -447,7 +447,7 @@ function bindFilterBtns() {
 }
 bindFilterBtns();
 
-// ── 動態關鍵字按鈕（從 projects.json 統計 top10，session 隨機抽 3）──
+// ── 動態關鍵字按鈕（top10 多樣化抽選，共現率 > 60% 不同時出現）──
 fetch('/projects.json?v=' + new Date().toISOString().slice(0,10))
   .then(r => r.json())
   .then(projects => {
@@ -471,11 +471,36 @@ fetch('/projects.json?v=' + new Date().toISOString().slice(0,10))
       .slice(0, 10)
       .map(([kw]) => kw);
 
+    // 計算兩關鍵字的共現率（kwA 出現時，kwB 同時出現的比例）
+    function coOccRate(kwA, kwB) {
+      const docsA = projects.filter(p => (p.keywords || []).includes(kwA));
+      if (!docsA.length) return 0;
+      return docsA.filter(p => (p.keywords || []).includes(kwB)).length / docsA.length;
+    }
+
+    // 從 pool 選 n 個多樣化關鍵字：與已選者共現率 > threshold 就跳過
+    function pickDiverse(pool, n, threshold) {
+      const shuffled = [...pool].sort(() => Math.random() - 0.5);
+      const chosen = [];
+      for (const kw of shuffled) {
+        if (chosen.length >= n) break;
+        const tooClose = chosen.some(s =>
+          coOccRate(s, kw) > threshold || coOccRate(kw, s) > threshold
+        );
+        if (!tooClose) chosen.push(kw);
+      }
+      // 若多樣化條件下選不滿，寬鬆補齊（不重複即可）
+      for (const kw of shuffled) {
+        if (chosen.length >= n) break;
+        if (!chosen.includes(kw)) chosen.push(kw);
+      }
+      return chosen;
+    }
+
     // session 固定：每次造訪抽一次，關掉分頁才換
     let chosen = JSON.parse(sessionStorage.getItem('ic_kw_btns') || 'null');
     if (!chosen || !chosen.every(k => top10.includes(k))) {
-      const shuffled = [...top10].sort(() => Math.random() - 0.5);
-      chosen = shuffled.slice(0, 3);
+      chosen = pickDiverse(top10, 3, 0.6);
       sessionStorage.setItem('ic_kw_btns', JSON.stringify(chosen));
     }
 
