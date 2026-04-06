@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="收錄美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等主題的完整研究成果。每篇都是從好奇心出發、認真整理分析後的筆記，也是用來跟朋友討論的素材。">
+<meta name="keywords" content="IC,研究室,生涯輔導,K-pop,人物研究,科技,AI,Claude">
+<meta name="author" content="IC">
+<link rel="canonical" href="https://iclab.ichentsai.tw/">
+<link rel="alternate" type="application/rss+xml" title="蔡依橙的個人研究室" href="https://iclab.ichentsai.tw/feed.xml">
+<meta name="robots" content="index, follow">
+<title>蔡依橙的個人研究室｜好奇心驅動的研究成果總覽</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23C48A5A'/%3E%3Ctext x='50' y='54' text-anchor='middle' dominant-baseline='central' font-family='serif' font-weight='bold' font-size='58' fill='white'%3EIC%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://iclab.ichentsai.tw/">
+<meta property="og:title" content="蔡依橙的個人研究室">
+<meta property="og:description" content="收錄美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等主題的完整研究成果。每篇都是從好奇心出發、認真整理分析後的筆記，也是用來跟朋友討論的素材。">
+<meta property="og:image" content="images/cards/hero-laptop.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="蔡依橙的個人研究室">
+<meta name="twitter:description" content="收錄美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等主題的完整研究成果。每篇都是從好奇心出發、認真整理分析後的筆記，也是用來跟朋友討論的素材。">
+<meta name="twitter:image" content="images/cards/hero-laptop.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W62W54P820"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W62W54P820');</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700;900&display=swap');
+
+  :root {
+    --bg: #FAF6F1;
+    --card-bg: #FFFFFF;
+    --text: #2C2825;
+    --text-light: #6B6460;
+    --text-muted: #A69E97;
+    --border: #EDE6DD;
+    --accent: #B8782E;
+    --shadow: 0 2px 8px rgba(44,40,37,0.05), 0 8px 28px rgba(44,40,37,0.04);
+    --radius: 20px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Noto Sans TC',-apple-system,sans-serif; color:var(--text); background:var(--bg); line-height:1.8; -webkit-font-smoothing:antialiased; }
+
+  .hero { position:relative; overflow:hidden; background:#2A1F14; color:white; text-align:center; padding:80px 24px 64px; border-radius:0 0 36px 36px; }
+  .hero-cover { position:absolute; inset:0; z-index:0; }
+  .hero-cover img { width:100%; height:100%; object-fit:cover; object-position:center 75%; opacity:0.65; }
+  .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(42,31,20,0.1) 0%,rgba(42,31,20,0.65) 100%); z-index:1; }
+  .hero-content { position:relative; z-index:2; }
+  .hero h1 { font-family:'Noto Serif TC',serif; font-size:2.6em; font-weight:900; letter-spacing:0.05em; text-shadow:0 2px 16px rgba(0,0,0,0.3); margin-bottom:8px; }
+  .hero .subtitle { font-size:1em; opacity:0.85; font-weight:400; letter-spacing:0.02em; max-width:750px; margin-left:auto; margin-right:auto; }
+  .hero .counter-bar { margin-top:16px; font-size:0.8em; opacity:0.7; }
+  .hero .counter-bar span { font-weight:700; }
+
+  .filter-bar { max-width:900px; margin:-18px auto 24px; padding:0 20px; position:relative; z-index:3; }
+  .filter-inner { background:var(--card-bg); border-radius:var(--radius); padding:14px 20px; box-shadow:var(--shadow); display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+  .filter-btn { padding:6px 18px; border-radius:30px; border:1.5px solid var(--border); background:transparent; color:var(--text-light); font-size:0.88em; font-weight:600; cursor:pointer; transition:all 0.2s; font-family:inherit; }
+  .filter-btn:hover { border-color:var(--accent); color:var(--accent); }
+  .filter-btn.active { background:var(--accent); color:white; border-color:var(--accent); }
+
+  .search-wrap { position:relative; display:inline-flex; align-items:center; }
+  .search-icon { position:absolute; left:12px; font-size:0.9em; pointer-events:none; line-height:1; }
+  .search-input { padding:6px 16px 6px 32px; border-radius:30px; border:1.5px solid var(--border); background:transparent; color:var(--text); font-size:0.88em; font-weight:500; font-family:inherit; outline:none; min-width:160px; transition:border-color 0.2s; }
+  .search-input:focus { border-color:var(--accent); }
+  .search-input::placeholder { color:var(--text-muted); }
+
+  .grid { max-width:900px; margin:0 auto; padding:0 20px 40px; display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; }
+  .project-card { background:var(--card-bg); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--border); transition:transform 0.2s,box-shadow 0.2s; text-decoration:none; color:inherit; display:flex; flex-direction:column; }
+  .project-card:hover { transform:translateY(-4px); box-shadow:0 4px 12px rgba(44,40,37,0.08),0 16px 40px rgba(44,40,37,0.06); }
+  .card-thumb { width:100%; height:180px; overflow:hidden; border-radius:var(--radius) var(--radius) 0 0; }
+  .card-thumb img { width:100%; height:100%; object-fit:cover; transition:transform 0.45s ease; display:block; }
+  .project-card:hover .card-thumb img { transform:scale(1.07); }
+  .card-body { padding:18px 20px 20px; flex:1; display:flex; flex-direction:column; }
+  .card-body .card-date { font-size:0.75em; color:#B8A99A; margin:0 0 4px 0; letter-spacing:0.03em; flex:none; }
+  .card-body h3 { font-size:1.08em; font-weight:700; margin:0 0 6px 0; line-height:1.4; }
+  .card-body p { font-size:0.88em; color:var(--text-light); flex:1; margin-bottom:12px; }
+  .card-meta { display:flex; justify-content:space-between; align-items:center; }
+  .card-views { font-size:0.78em; color:var(--text-muted); margin-left:auto; }
+
+  footer { text-align:center; padding:20px; color:var(--text-muted); font-size:0.8em; border-top:1px solid var(--border); max-width:900px; margin:0 auto 40px; }
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+  footer a { color:var(--text-muted); text-decoration:none; }
+  .img-credit { font-size:11px; color:#bbb; text-align:center; padding:8px 24px 16px; line-height:1.8; max-width:900px; margin:0 auto; }
+
+  @media (max-width:600px) {
+    .hero { padding:48px 16px 42px; }
+    .hero h1 { font-size:2em; }
+    .grid { grid-template-columns:1fr; }
+  }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"IC","url":"https://iclab.ichentsai.tw/","jobTitle":"CEO","worksFor":{"@type":"Organization","name":"新思惟國際"},"sameAs":["https://ichentsaitw.github.io/"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"蔡依橙的個人研究室","url":"https://iclab.ichentsai.tw/"}
+</script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-cover"><img src="images/cards/hero-laptop.jpg" alt="書桌筆電書堆" width="1280" height="853"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1><a href="#" id="homeReset" style="color:inherit;text-decoration:none;">蔡依橙的個人研究室</a></h1>
+    <p class="subtitle">這裡記錄了許多我曾經好奇過、認真收集資訊並整理分析的主題。涵蓋美國大學申請與留學趨勢、文化現象觀察、親子教養與 AI 素養等議題，每篇都是完整的研究成果，也是我用來跟朋友們討論的素材。</p>
+    <div class="counter-bar"><span id="counter">— 次瀏覽</span></div>
+    <div style="margin-top:.5rem;font-size:.75rem;color:rgba(255,255,255,.55);letter-spacing:.03em;">最近更新 <span id="last-update-date">2026/4/5</span><span id="last-update-note"> · Palantir 研究文章上線</span></div>
+  </div>
+</div>
+
+<nav class="filter-bar">
+  <div class="filter-inner" id="filterInner">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <!-- keyword buttons injected by JS -->
+    <div class="search-wrap"><span class="search-icon">🔍</span><input type="text" id="icSearch" class="search-input" placeholder="搜尋內容…" autocomplete="off"></div>
+  </div>
+</nav>
+
+<h2 class="sr-only">所有研究成果</h2>
+<div class="grid" id="projectGrid">
+
+
+  <!-- 2026/4/5 -->
+  <a href="https://iclab.ichentsai.tw/palantir-research/" target="_blank" class="project-card" data-tag="科技人物" data-site="palantir-research">
+    <div class="card-thumb"><img src="images/cards/palantir-research.jpg" alt="矽谷最危險的公司．Palantir：AI國防巨獸與資訊整合的時代" loading="lazy"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/5</p>
+      <h3>矽谷最危險的公司．Palantir：AI國防巨獸與資訊整合的時代</h3>
+      <p>從哲學家 Karp、資本家 Thiel，到 Ontology、Digital Twin——解析 Palantir 如何用資訊整合重塑世界權力格局。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="palantir-research">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/5 -->
+  <a href="https://iclab.ichentsai.tw/harness-engineering/" target="_blank" class="project-card" data-tag="科技觀察" data-site="harness-engineering">
+    <div class="card-thumb"><img src="images/cards/harness-engineering.jpg" alt="Harness Engineering：如何讓 AI 固定產出高品質成果" loading="lazy"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/5</p>
+      <h3>Harness Engineering：如何讓 AI 固定產出高品質成果</h3>
+      <p>光靠 prompt 已經不夠了。2025 年最重要的 AI 新概念，用你最熟悉的 AP 題庫解釋清楚。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="harness-engineering">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/5 -->
+  <a href="https://iclab.ichentsai.tw/about/" target="_blank" class="project-card" data-tag="關於我" data-site="about">
+    <div class="card-thumb"><img src="images/cards/about-ic.jpg" alt="蔡依橙" loading="lazy" style="object-position:center top;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/5</p>
+      <h3>蔡依橙 — 醫師、創業者、教育工作者</h3>
+      <p>好奇心後面的那個人。延伸連結、聯絡方式，在這裡。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="about">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/5 -->
+  <a href="https://iclab.ichentsai.tw/us-mba-guide/" target="_blank" class="project-card" data-tag="大學相關" data-site="us-mba-guide">
+    <div class="card-thumb"><img src="images/cards/mba-harvard.jpg" alt="美國商學院 MBA 選校指南" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/5</p>
+      <h3>美國商學院 MBA 選校指南</h3>
+      <p>前 30 名商學院深度分析，含十大次專領域薪資地圖，M7 到廣泛佳選完整比較。台灣學生版。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="us-mba-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/5 -->
+  <a href="https://iclab.ichentsai.tw/milk-guide/" target="_blank" class="project-card" data-tag="文化閱讀" data-site="milk-guide">
+    <div class="card-thumb"><img src="images/cards/milk-dairy.jpg" alt="紐西蘭乳牛牧場" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/5</p>
+      <h3>進口長效乳完整解析：安佳為何比較濃？威斯蘭是中資？</h3>
+      <p>安佳為什麼比較濃？威斯蘭竟然是中資？從梅納反應、均質化到中資背景，一次搞懂安佳、紐麥福、愛牧、威斯蘭、綠原。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="milk-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+
+  <!-- 2026/4/4 -->
+  <a href="https://iclab.ichentsai.tw/us-stay-rate/" target="_blank" class="project-card" data-tag="大學相關" data-site="us-stay-rate">
+    <div class="card-thumb"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Gates-Hillman_Complex_at_Carnegie_Mellon_University.jpg/960px-Gates-Hillman_Complex_at_Carnegie_Mellon_University.jpg" alt="Gates-Hillman Complex, Carnegie Mellon University" loading="lazy" style="object-position:center 40%;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/4</p>
+      <h3>將來想做什麼？先看看世界的機會</h3>
+      <p>各科系留美前景 × H-1B 機率 × 起薪比較。科系選擇比努力更重要。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="us-stay-rate">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/3 -->
+  <a href="https://iclab.ichentsai.tw/sat-reading-800/" target="_blank" class="project-card" data-tag="大學相關" data-site="sat-reading-800">
+    <div class="card-thumb"><img src="images/cards/sat-reading.jpg" alt="SAT 閱讀備考學生" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/3</p>
+      <h3>SAT 閱讀衝 800 完全攻略</h3>
+      <p>不是讀更多，是錯更少——數學強的你，轉換思維就能突破。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="sat-reading-800">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/3 -->
+  <a href="https://iclab.ichentsai.tw/us-ee-university-guide/" target="_blank" class="project-card" data-tag="大學相關" data-site="us-ee-university-guide">
+    <div class="card-thumb"><img src="images/cards/mit-dome.jpg" alt="美國大學工程排名前 30 選校指南" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/3</p>
+      <h3>美國大學工程排名前 30 選校指南</h3>
+      <p>美國電機工程（Electrical Engineering）前 30 名大學的研究與整理。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="us-ee-university-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/2 -->
+  <a href="https://iclab.ichentsai.tw/chef-my-fridge-analysis/" target="_blank" class="project-card" data-tag="文化閱讀" data-site="chef-my-fridge-analysis">
+    <div class="card-thumb"><img src="images/cards/bibimbap.jpg" alt="拜託了冰箱" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/2</p>
+      <h3>拜託了冰箱｜打開冰箱的那 3 秒鐘</h3>
+      <p>一個韓國綜藝節目，藏著關於限制、直覺與真正專業力的深層問題。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="chef-my-fridge-analysis">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/2 -->
+  <a href="https://joboyoyo.github.io/APWH_GrandReview/" target="_blank" class="project-card" data-tag="" data-site="apwh">
+    <div class="card-thumb"><img src="images/cards/pyramids.jpg" alt="世界史互動時間軸" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/2</p>
+      <h3>世界史互動時間軸</h3>
+      <p>支援縮放的互動式網頁，涵蓋世界重大時期、重大帝國、重大事件。</p>
+      <div class="card-meta">
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/2 -->
+  <a href="https://iclab.ichentsai.tw/ic-blog/" target="_blank" class="project-card" data-tag="" data-site="ic-blog-gh">
+    <div class="card-thumb"><img src="images/cards/journaling.jpg" alt="蔡依橙觀點" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/2</p>
+      <h3>蔡依橙觀點</h3>
+      <p>測試型的實驗網站，老東西，練格式設計。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="ic-blog-gh">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/4/2 -->
+  <a href="https://iclab.ichentsai.tw/ai-literacy-workshop/" target="_blank" class="project-card" data-tag="" data-site="ai-literacy-workshop">
+    <div class="card-thumb"><img src="images/cards/coding-kids.jpg" alt="AI 素養教育工作坊" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/4/2</p>
+      <h3>AI 素養教育工作坊</h3>
+      <p>測試活動網站版型，練練新格式。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="ai-literacy-workshop">—</span></span>
+      </div>
+    </div>
+  </a>
+
+
+
+
+
+  <!-- 2026/3/26 -->
+  <a href="https://iclab.ichentsai.tw/kpop-big4-analysis/" target="_blank" class="project-card" data-tag="文化閱讀" data-site="kpop-big4-analysis">
+    <div class="card-thumb"><img src="images/cards/kpop-expo.jpg" alt="K-POP 四大經紀公司" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/3/26</p>
+      <h3>K-POP 四大經紀公司｜誰賺最多？誰的藝人最幸福？</h3>
+      <p>SM、YG、JYP、HYBE——分潤結構、練習生人權、創辦人接班、粉絲經濟全解析。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="kpop-big4-analysis">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/3/26 -->
+  <a href="https://iclab.ichentsai.tw/blackpink-guide/" target="_blank" class="project-card" data-tag="文化閱讀" data-site="blackpink-guide">
+    <div class="card-thumb"><img src="images/cards/blackpink.jpg" alt="認識 BLACKPINK" loading="lazy" style="object-position:center top;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/3/26</p>
+      <h3>認識 BLACKPINK｜商業模式與合約策略全解析</h3>
+      <p>四個人如何改寫 K-pop 的商業規則——從練習生到精品代言人。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="blackpink-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/3/26 -->
+  <a href="https://iclab.ichentsai.tw/claude-research/" target="_blank" class="project-card" data-tag="科技觀察" data-site="claude-research">
+    <div class="card-thumb"><img src="images/cards/dario-amodei.jpg" alt="Dario Amodei 演講" loading="lazy" style="object-position:center top;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/3/26</p>
+      <h3>Anthropic 深度研究：Claude 為何能殺出血路？</h3>
+      <p>從 OpenAI 出走的 11 人，如何用「安全優先」打造史上最快企業軟體公司。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="claude-research">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/3/26 -->
+  <a href="https://iclab.ichentsai.tw/aespa-analysis/" target="_blank" class="project-card" data-tag="文化閱讀" data-site="aespa-analysis">
+    <div class="card-thumb"><img src="images/cards/aespa.jpg" alt="深入了解 aespa" loading="lazy" style="object-position:center top;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/3/26</p>
+      <h3>深入了解 aespa｜從練習生到舞台背後的真實故事</h3>
+      <p>十億美元併購案、Supernova 神曲、過勞真相——給粉絲的商業世界入門讀物。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="aespa-analysis">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/3/25 -->
+  <a href="https://iclab.ichentsai.tw/shahimi-guide/" target="_blank" class="project-card" data-tag="文化閱讀" data-site="shahimi-guide">
+    <div class="card-thumb"><img src="images/cards/shark.jpg" alt="胖鯊魚鯊西米" loading="lazy" style="object-position:center bottom;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/3/25</p>
+      <h3>胖鯊魚鯊西米｜情報整理</h3>
+      <p>台灣 LINE 貼圖 IP 的商業分析。從分潤機制到收入天花板，給國中生的研究入門。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="shahimi-guide">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/3/25 -->
+  <a href="https://iclab.ichentsai.tw/sam-altman-story/" target="_blank" class="project-card" data-tag="科技觀察" data-site="sam-altman-story">
+    <div class="card-thumb"><img src="images/cards/sam-altman.jpg" alt="Sam Altman 背景研究" loading="lazy" style="object-position:center top;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/3/25</p>
+      <h3>Sam Altman 背景研究</h3>
+      <p>搭配《The Optimist》閱讀，整理 Sam Altman 的人生時間軸、創業歷程與爭議事件。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="sam-altman-story">—</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 2026/3/23 -->
+  <a href="https://iclab.ichentsai.tw/denryu/" target="_blank" class="project-card" data-tag="文化閱讀" data-site="denryu">
+    <div class="card-thumb"><img src="images/cards/pikachu.jpg" alt="蔥盟寶可夢圖鑑" loading="lazy" style="object-position:center center;"></div>
+    <div class="card-body">
+      <p class="card-date">2026/3/23</p>
+      <h3>蔥盟寶可夢圖鑑</h3>
+      <p>電龍、小火龍、傑尼龜、胖丁的互動式圖鑑網頁。蔥盟知名寶可夢大集合。</p>
+      <div class="card-meta">
+        <span class="card-views"><span class="site-count" data-site="denryu">—</span></span>
+      </div>
+    </div>
+  </a>
+
+
+</div>
+
+<footer>
+  蔡依橙的個人研究室｜好奇心驅動，Claude 協作產出<br>
+  <a href="mailto:ichentsai.tw@gmail.com">ichentsai.tw@gmail.com</a>
+  <span style="margin:0 8px;opacity:.5;">·</span>
+  © 蔡依橙
+</footer>
+
+<p class="img-credit">圖片來源｜首圖: freddie marriage (CC0) via Unsplash/Wikimedia ・ SAT: Tulane Public Relations (CC BY 2.0) ・ 拜託了冰箱: Agnes Ly (CC BY-SA 2.0) ・ 留學申請: BrokenSphere (CC BY-SA 3.0) ・ IC觀點: Tina Shaw/USFWS (CC BY 2.0) ・ DC旅遊: Martin Falbisoner (CC BY-SA 3.0) ・ Purdue新生: Amerique (CC BY 3.0) ・ AI素養: Arno Mikkor (CC BY 2.0) ・ GT備取: Joseph Zollo (CC BY 2.0) ・ 錄取結果: Thepresido (CC BY-SA 4.0) ・ K-POP四大: KOCCA (KOGL Type 1) ・ Anthropic: TechCrunch/Kimberly White (CC BY 2.0) ・ aespa: Robbie Klinkenberg (CC BY 4.0) ・ Sam Altman: Steve Jurvetson (CC BY 2.0) ・ 鯊西米: Dorian Wallender (CC BY-SA 2.0) ・ BLACKPINK: Judgefloro (CC0) ・ 寶可夢: Yoshikazu TAKADA (CC BY 2.0) ・ MIT/EE: John Phelan (CC BY 3.0) ・ 世界史: Ricardo Liberato (CC BY-SA 2.0) ・ 進口牛乳: AnnWoolliams (CC BY-SA 4.0) ・ MBA選校: Kenneth C. Zirkel (CC BY-SA 4.0) ・ 赴美升學: Nick Allen (CC BY-SA 4.0) ・ Harness Engineering: Jernej Furman (CC BY 2.0) via Wikimedia Commons ・ Palantir: AI 生成圖（Python PIL）・ 自學升頂尖理工: Fcb981/Thermos (CC BY-SA 3.0) via Wikimedia Commons</p>
+
+<script>
+const SUPABASE_URL = 'https://dypkogwrsqtonefaodiv.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5cGtvZ3dyc3F0b25lZmFvZGl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MDg2NzMsImV4cCI6MjA4OTk4NDY3M30.Qqh4V7_yumS5TnrV5Eora6VrC3T1bjbdTl7Pd2s-Tw4';
+
+fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_page_view`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` },
+  body: JSON.stringify({ site: 'ic-lab' })
+}).then(r => r.json()).then(n => {
+  document.getElementById('counter').textContent = (n || 0).toLocaleString() + ' 次瀏覽';
+}).catch(() => {});
+
+fetch(`${SUPABASE_URL}/rest/v1/page_views?select=site_id,count`, {
+  headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+}).then(r => r.json()).then(rows => {
+  if (!Array.isArray(rows)) return;
+  const totals = {};
+  rows.forEach(r => { totals[r.site_id] = (totals[r.site_id] || 0) + (r.count || 0); });
+  document.querySelectorAll('.site-count[data-site]').forEach(el => {
+    const v = totals[el.dataset.site];
+    if (v) el.textContent = v.toLocaleString() + ' 次瀏覽';
+  });
+}).catch(() => {});
+
+// ── Filter + Search ──────────────────────────────────────
+let activeKw = 'all';
+let searchIndex = null;
+let searchQuery = '';
+let kwMap = {}; // site_id → keywords[]
+
+function applyFilter() {
+  const q = searchQuery.trim().toLowerCase();
+  document.querySelectorAll('.project-card').forEach(card => {
+    const siteId = card.dataset.site;
+    const kws = kwMap[siteId] || [];
+    const kwOk = (activeKw === 'all' || kws.some(k => k === activeKw));
+    let searchOk = true;
+    if (q) {
+      const cardText = card.textContent.toLowerCase();
+      if (cardText.includes(q)) {
+        searchOk = true;
+      } else if (searchIndex) {
+        const entry = searchIndex.find(e => e.site === siteId);
+        searchOk = entry ? entry.content.toLowerCase().includes(q) : false;
+      } else {
+        searchOk = false;
+      }
+    }
+    card.style.display = (kwOk && searchOk) ? '' : 'none';
+  });
+}
+
+function bindFilterBtns() {
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeKw = btn.dataset.filter;
+      applyFilter();
+    });
+  });
+}
+bindFilterBtns();
+
+// ── 動態關鍵字按鈕（從 projects.json 統計 top10，session 隨機抽 3）──
+fetch('/projects.json?v=' + new Date().toISOString().slice(0,10))
+  .then(r => r.json())
+  .then(projects => {
+    // 建立 site_id → keywords 對照表
+    projects.forEach(p => { if (p.keywords) kwMap[p.site_id] = p.keywords; });
+
+    // 統計所有關鍵字頻率（優先中文）
+    const freq = {};
+    projects.forEach(p => {
+      (p.keywords || []).forEach(kw => { freq[kw] = (freq[kw] || 0) + 1; });
+    });
+
+    // top 10，中文優先（有中文字的排前面）
+    const top10 = Object.entries(freq)
+      .sort((a, b) => {
+        const hasCJKa = /[\u4e00-\u9fff]/.test(a[0]) ? 1 : 0;
+        const hasCJKb = /[\u4e00-\u9fff]/.test(b[0]) ? 1 : 0;
+        if (hasCJKb !== hasCJKa) return hasCJKb - hasCJKa;
+        return b[1] - a[1];
+      })
+      .slice(0, 10)
+      .map(([kw]) => kw);
+
+    // session 固定：每次造訪抽一次，關掉分頁才換
+    let chosen = JSON.parse(sessionStorage.getItem('ic_kw_btns') || 'null');
+    if (!chosen || !chosen.every(k => top10.includes(k))) {
+      const shuffled = [...top10].sort(() => Math.random() - 0.5);
+      chosen = shuffled.slice(0, 3);
+      sessionStorage.setItem('ic_kw_btns', JSON.stringify(chosen));
+    }
+
+    // 插入按鈕（在全部按鈕後、搜尋框前）
+    const searchWrap = document.querySelector('.search-wrap');
+    chosen.forEach(kw => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn';
+      btn.dataset.filter = kw;
+      btn.textContent = kw;
+      searchWrap.parentNode.insertBefore(btn, searchWrap);
+    });
+    bindFilterBtns();
+  })
+  .catch(() => {});
+
+// Eager-load search index on page load (eliminates race condition when typing fast)
+fetch('/search-index.json?v=' + new Date().toISOString().slice(0,10))
+  .then(r => r.json())
+  .then(data => { searchIndex = data; })
+  .catch(() => { searchIndex = []; });
+
+const searchEl = document.getElementById('icSearch');
+if (searchEl) {
+  searchEl.addEventListener('input', () => {
+    searchQuery = searchEl.value;
+    applyFilter();
+  });
+}
+
+document.querySelectorAll('.pinned-last').forEach(c => document.getElementById('projectGrid').appendChild(c));
+
+document.getElementById('homeReset').addEventListener('click', e => {
+  e.preventDefault();
+  // 清除搜尋
+  searchQuery = '';
+  if (searchEl) searchEl.value = '';
+  // 重設 filter 為全部
+  activeKw = 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.filter === 'all');
+  });
+  applyFilter();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ── 自動同步最近更新日期 ─────────────────────────────────────
+(function() {
+  const dates = Array.from(document.querySelectorAll('.card-date'))
+    .map(el => el.textContent.trim())
+    .filter(d => /\d{4}\/\d+\/\d+/.test(d))
+    .map(d => { const p = d.split('/'); return new Date(p[0], p[1]-1, p[2]); })
+    .filter(d => !isNaN(d));
+  if (!dates.length) return;
+  const latest = new Date(Math.max(...dates));
+  const formatted = `${latest.getFullYear()}/${latest.getMonth()+1}/${latest.getDate()}`;
+  const el = document.getElementById('last-update-date');
+  if (el) el.textContent = formatted;
+})();
+</script>
+</body>
+</html>
