@@ -1,5 +1,20 @@
 [
   {
+    "repo": "openai-coup",
+    "url": "https://iclab.ichentsai.tw/openai-coup/",
+    "title": "OpenAI 五天政變啟示錄：當使命遇上資本，誰說了算？",
+    "desc": "開除、反撲、復辟，743 名員工聯署，AI 史上最震撼的五天。技術人、說故事的人、資本，誰才是真正的贏家？",
+    "tag": "科技觀察",
+    "emoji": "⚡",
+    "site_id": "openai-coup",
+    "date": "2026-04-08",
+    "pinned": false,
+    "image": "https://ichentsaitw.github.io/images/cards/openai-coup.jpg",
+    "keywords": [
+      "OpenAI", "AI", "人工智慧", "科技", "矽谷", "創業", "商業", "政治", "Sam Altman", "Ilya Sutskever", "ChatGPT"
+    ]
+  },
+  {
     "repo": "palantir-research",
     "url": "https://iclab.ichentsai.tw/palantir-research/",
     "title": "矽谷最危險的公司．Palantir：AI 國防巨獸與資訊整合的時代",
