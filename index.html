@@ -413,12 +413,11 @@
 const SUPABASE_URL = 'https://dypkogwrsqtonefaodiv.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR5cGtvZ3dyc3F0b25lZmFvZGl2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0MDg2NzMsImV4cCI6MjA4OTk4NDY3M30.Qqh4V7_yumS5TnrV5Eora6VrC3T1bjbdTl7Pd2s-Tw4';
 
+// Increment IC-LAB homepage, then fetch all views for grand total + per-card counts
 fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_page_view`, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` },
   body: JSON.stringify({ site: 'ic-lab' })
-}).then(r => r.json()).then(n => {
-  document.getElementById('counter').textContent = (n || 0).toLocaleString() + ' 次瀏覽';
 }).catch(() => {});
 
 fetch(`${SUPABASE_URL}/rest/v1/page_views?select=site_id,count`, {
@@ -427,10 +426,21 @@ fetch(`${SUPABASE_URL}/rest/v1/page_views?select=site_id,count`, {
   if (!Array.isArray(rows)) return;
   const totals = {};
   rows.forEach(r => { totals[r.site_id] = (totals[r.site_id] || 0) + (r.count || 0); });
+
+  // Per-card individual counts
   document.querySelectorAll('.site-count[data-site]').forEach(el => {
     const v = totals[el.dataset.site];
     if (v) el.textContent = v.toLocaleString() + ' 次瀏覽';
   });
+
+  // Grand total = ic-lab homepage + all card site IDs
+  const cardSiteIds = new Set(
+    Array.from(document.querySelectorAll('.site-count[data-site]'))
+      .map(el => el.dataset.site).filter(Boolean)
+  );
+  const grandTotal = ['ic-lab', ...cardSiteIds]
+    .reduce((sum, id) => sum + (totals[id] || 0), 0);
+  document.getElementById('counter').textContent = grandTotal.toLocaleString() + ' 次瀏覽';
 }).catch(() => {});
 
 // ── Filter + Search ──────────────────────────────────────
