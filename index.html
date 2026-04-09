@@ -428,6 +428,12 @@ fetch(`${SUPABASE_URL}/rest/v1/page_views?select=site_id,count`, {
   const totals = {};
   rows.forEach(r => { totals[r.site_id] = (totals[r.site_id] || 0) + (r.count || 0); });
 
+  // ic-blog-gh 的總數 = 首頁 + 所有 blog-* 文章
+  const icBlogTotal = Object.entries(totals)
+    .filter(([id]) => id === 'ic-blog-gh' || id.startsWith('blog-'))
+    .reduce((sum, [, v]) => sum + v, 0);
+  if (icBlogTotal) totals['ic-blog-gh'] = icBlogTotal;
+
   // Per-card individual counts
   document.querySelectorAll('.site-count[data-site]').forEach(el => {
     const v = totals[el.dataset.site];
