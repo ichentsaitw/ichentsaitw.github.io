@@ -1,5 +1,18 @@
 [
   {
+    "repo": "forbes-new-ivies-2026",
+    "url": "https://iclab.ichentsai.tw/forbes-new-ivies-2026/",
+    "title": "Forbes New Ivies 2026：AI 時代，雇主在找什麼樣的大學生？",
+    "desc": "Forbes 調查逾百位 C-Suite 主管，選出 20 所最受雇主青睞的大學。37% 主管比五年前更不想雇 Ivy 畢業生，但這份榜單有它的局限，讀前必知。",
+    "tag": "教育閱讀",
+    "emoji": "🎓",
+    "site_id": "forbes-new-ivies-2026",
+    "date": "2026-04-11",
+    "pinned": false,
+    "image": "https://ichentsaitw.github.io/images/cards/forbes-new-ivies-2026.jpg",
+    "keywords": ["美國大學", "留學", "AI", "教育", "科技", "商業", "選校", "大學排名", "雇主", "Ivy League", "Forbes"]
+  },
+  {
     "repo": "openai-coup",
     "url": "https://iclab.ichentsai.tw/openai-coup/",
     "title": "OpenAI 五天政變啟示錄：當使命遇上資本，誰說了算？",
