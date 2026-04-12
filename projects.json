@@ -1,5 +1,18 @@
 [
   {
+    "repo": "anthropic-rise",
+    "url": "https://iclab.ichentsai.tw/anthropic-rise/",
+    "title": "Anthropic 的鴨子划水：為什麼全球企業正在轉向 Claude？",
+    "desc": "三個月內，企業首購 AI 從 50/50 變成 73% 選 Anthropic。訓練成本是 OpenAI 的 1/4，年化營收剛剛超越 $300 億。完整解析這波逆轉的五層原因。",
+    "tag": "科技觀察",
+    "emoji": "🤖",
+    "site_id": "anthropic-rise",
+    "date": "2026-04-12",
+    "pinned": false,
+    "image": "https://iclab.ichentsai.tw/images/cards/anthropic-rise.jpg",
+    "keywords": ["AI", "Anthropic", "Claude", "OpenAI", "ChatGPT", "人工智慧", "科技", "矽谷", "企業", "Claude Code", "Constitutional AI", "科技觀察"]
+  },
+  {
     "repo": "forbes-new-ivies-2026",
     "url": "https://iclab.ichentsai.tw/forbes-new-ivies-2026/",
     "title": "Forbes New Ivies 2026：AI 時代，雇主在找什麼樣的大學生？",
