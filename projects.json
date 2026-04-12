@@ -1,5 +1,18 @@
 [
   {
+    "repo": "greek-life-guide",
+    "url": "https://iclab.ichentsai.tw/greek-life-guide/",
+    "title": "美國大學希臘字母兄弟會姐妹會",
+    "desc": "兄弟會與姐妹會的起源、專有名詞、真實效益與系統性風險。240 年歷史、900 萬成員的平行社會。",
+    "tag": "文化閱讀",
+    "emoji": "🏛️",
+    "site_id": "greek-life-guide",
+    "date": "2026-04-13",
+    "pinned": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/University_of_Texas_at_Arlington_March_2021_163_%28Greek_Row%29.jpg/640px-University_of_Texas_at_Arlington_March_2021_163_%28Greek_Row%29.jpg",
+    "keywords": ["美國大學", "留學", "大學生活", "美國文化", "升學", "兄弟會", "姐妹會", "Greek Life", "Fraternity", "Sorority"]
+  },
+  {
     "repo": "anthropic-rise",
     "url": "https://iclab.ichentsai.tw/anthropic-rise/",
     "title": "Anthropic 的鴨子划水：為什麼全球企業正在轉向 Claude？",
